@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Huach.Admin.ViewModels</name>
+    </assembly>
+    <members>
+        <member name="T:Huach.Admin.ViewModels.BaseRequest">
+            <summary>
+            请求基类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.UserInfo">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.UserInfo.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.UserInfo.Mobile">
+            <summary>
+            手机号
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.UserInfo.RealName">
+            <summary>
+            真实姓名
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Huach.Admin.Api</name>
+    </assembly>
+    <members>
+        <member name="F:Huach.Admin.Api.Contants.TokenName">
+            <summary>
+            http请求token字段
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.Api.Controllers.BaseApiController.CurrentUser">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.TokenController">
+            <summary>
+            用户登录 Token
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.TokenController.Login(System.String,System.String)">
+            <summary>
+            获取token
+            </summary>
+            <param name="userIdentification">用户名</param>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.SysUserController">
+            <summary>
+            用户
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.SysUserController.Get(System.Int32)">
+            <summary>
+            获取用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.SysUserController.Error2(System.String)">
+            <summary>
+            异常测试
+            </summary>
+            <param name="hahah"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Huach.Admin.Api.Filters.JwtAuthFilterAttribute.Secret">
+            <summary>
+            设置Token密钥
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.Api.Filters.JwtAuthFilterAttribute.JwtTokenKeyName">
+            <summary>
+            设置tokenName
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Filters.ModelValidationFilterAttribute">
+            <summary>
+            接口参数验证过滤器
+            author：wolf
+            </summary>
+        </member>
+    </members>
+</doc>
