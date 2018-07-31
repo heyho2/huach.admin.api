@@ -20,14 +20,17 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 来源控制器
         /// </summary>
+        [StringLength(50), Required, Column(TypeName = "varchar")]
         public string Controller { get; set; }
         /// <summary>
         /// 来源方法
         /// </summary>
+        [StringLength(50), Required, Column(TypeName = "varchar")]
         public string Action { get; set; }
         /// <summary>
         /// 来源链接
         /// </summary>
+        [StringLength(500), Required, Column(TypeName = "varchar")]
         public string Url { get; set; }
         /// <summary>
         /// 日志类型

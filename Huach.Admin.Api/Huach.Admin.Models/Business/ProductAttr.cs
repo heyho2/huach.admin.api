@@ -9,15 +9,16 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 属性名称
         /// </summary>
-        [StringLength(30)]
+        [StringLength(30), Required]
         public string Name { get; set; }
         /// <summary>
         /// 属性值
         /// </summary>
+        [StringLength(30), Required]
         public string Value { get; set; }
         /// <summary>
         /// 产品Id
         /// </summary>
-        public string ProductTypeId { get; set; }
+        public int ProductTypeId { get; set; }
     }
 }

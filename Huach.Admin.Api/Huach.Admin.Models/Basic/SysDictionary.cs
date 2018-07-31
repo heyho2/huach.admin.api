@@ -9,18 +9,22 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 编码
         /// </summary>
-        [StringLength(50)]
+        [StringLength(50), Required, Column(TypeName = "varchar")]
         public string Code { get; set; }
         /// <summary>
         /// 值
         /// </summary>
-        [StringLength(500)]
+        [StringLength(500), Required, Column(TypeName = "varchar")]
         public string Value { get; set; }
         /// <summary>
         /// 类型编码
         /// </summary>
-        [StringLength(50)]
-        public string TypeCode { get; set; }
+        [StringLength(50), Required, Column(TypeName = "varchar")]
+        public string DictionaryTypeCode { get; set; }
+        /// <summary>
+        /// 类型ID
+        /// </summary>
+        public int DictionaryTypeId { get; set; }
         /// <summary>
         /// 父id
         /// </summary>

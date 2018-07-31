@@ -14,7 +14,7 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 地区名称
         /// </summary>
-        [StringLength(50)]
+        [StringLength(50), Required]
         public string Name { get; set; }
 
         /// <summary>

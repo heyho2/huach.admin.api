@@ -9,7 +9,7 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 标题
         /// </summary>
-        [StringLength(30)]
+        [StringLength(30),Required]
         public string Title { get; set; }
         /// <summary>
         /// 类型

@@ -15,9 +15,5 @@ namespace Huach.Admin.Models.Basic
         /// 属性值
         /// </summary>
         public string Name { get; set; }
-        /// <summary>
-        /// 产品Id
-        /// </summary>
-        public string ProductId { get; set; }
     }
 }

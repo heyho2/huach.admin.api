@@ -9,7 +9,7 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 标题
         /// </summary>
-        [StringLength(30)]
+        [StringLength(30),Required]
         public string Title { get; set; }
         /// <summary>
         /// 类型
@@ -44,5 +44,11 @@ namespace Huach.Admin.Models.Basic
         /// </summary>
         [Column(TypeName = "ntext")]
         public string Content { get; set; }
+        /// <summary>
+        /// 产品类型ID
+        /// </summary>
+        public int ProductTypeId { get; set; }
+
+        
     }
 }

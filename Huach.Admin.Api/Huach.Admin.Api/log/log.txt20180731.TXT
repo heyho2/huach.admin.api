@@ -1,0 +1,6 @@
+2018-07-31 02:28:29,129 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-07-31 02:31:04,483 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-07-31 02:31:48,081 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-07-31 23:44:07,732 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-07-31 23:55:44,880 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-07-31 23:59:30,304 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块

@@ -1,5 +1,6 @@
 ﻿using Huach.Admin.Models.Basic;
 using Huach.Admin.Models.Business;
+using Huach.Admin.Repository.Migrations;
 using Huach.Framework.Log;
 using System.Data.Entity;
 
@@ -14,7 +15,8 @@ namespace Huach.Admin.Repository
         }
         static HuachContext()
         {
-            Database.SetInitializer<HuachContext>(null);
+            //Database.SetInitializer<HuachContext>(null);
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<HuachContext, Configuration>());
             //修复bin目录下没有自动引入EntityFramework.SqlServer.dll
             FixEfProviderServicesProblem();
         }
