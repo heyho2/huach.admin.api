@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basic\SysMenuRepository.cs" />
+    <Compile Include="Basic\SysMenuRoleRepository.cs" />
+    <Compile Include="Basic\SysRegionRepository.cs" />
+    <Compile Include="Basic\SysRoleRepository.cs" />
+    <Compile Include="Basic\SysUserRoleRepository.cs" />
     <Compile Include="EFContextFactory.cs" />
     <Compile Include="HuachContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />

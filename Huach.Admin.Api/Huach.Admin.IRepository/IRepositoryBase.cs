@@ -1,4 +1,5 @@
-﻿using Huach.Admin.Models.Basic;
+﻿using Huach.Admin.Models;
+using Huach.Admin.Models.Basic;
 using Huach.Framework;
 using System;
 using System.Linq;
@@ -71,7 +72,7 @@ namespace Huach.Admin.IRepository
         /// <param name="keyValues"></param>
         /// <returns></returns>
         T Find(params object[] keyValues);
-        
+
         /// <summary>
         /// 实现对数据的分页查询
         /// </summary>
@@ -82,6 +83,6 @@ namespace Huach.Admin.IRepository
         /// <param name="order">DESC/ASC</param>
         /// <param name="sort">排序字段</param>
         /// <returns></returns>
-        IQueryable<T> LoadPaging(Expression<Func<T, bool>> whereLambda, out int total, int pageIndex, int pageSize, string order, string sort);
+        IQueryable<TResult> LoadPaging<TResult>(Expression<Func<T, bool>> whereLambda, Expression<Func<T, TResult>> selector, out int total, int pageIndex, int pageSize, string order, string sort);
     }
 }

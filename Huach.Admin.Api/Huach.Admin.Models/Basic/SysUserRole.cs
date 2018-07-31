@@ -9,12 +9,12 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 角色ID
         /// </summary>
-        [StringLength(128), Required]
-        public string RoleId { get; set; }
+        [Required]
+        public int RoleId { get; set; }
         /// <summary>
         /// 用户ID
         /// </summary>
-        [StringLength(128), Required]
-        public string UserId { get; set; }
+        [Required]
+        public int UserId { get; set; }
     }
 }

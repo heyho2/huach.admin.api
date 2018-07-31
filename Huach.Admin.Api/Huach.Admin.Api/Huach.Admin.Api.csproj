@@ -142,8 +142,15 @@
     <Compile Include="Config\WebApiConfig.cs" />
     <Compile Include="Contants.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\Basic\SysDictionaryController.cs" />
+    <Compile Include="Controllers\Basic\SysDictionaryTypeController.cs" />
+    <Compile Include="Controllers\Basic\SysMenuController.cs" />
+    <Compile Include="Controllers\Basic\SysMenuRoleController.cs" />
+    <Compile Include="Controllers\Basic\SysRegionController.cs" />
+    <Compile Include="Controllers\Basic\SysRoleController.cs" />
+    <Compile Include="Controllers\Basic\SysUserController.cs" />
+    <Compile Include="Controllers\Basic\SysUserRoleController.cs" />
     <Compile Include="Controllers\TokenController.cs" />
-    <Compile Include="Controllers\SysUserController.cs" />
     <Compile Include="Filters\CustomExceptionFilterAttribute.cs" />
     <Compile Include="Filters\JwtAuthFilterAttribute.cs" />
     <Compile Include="Filters\ModelValidationFilterAttribute.cs" />

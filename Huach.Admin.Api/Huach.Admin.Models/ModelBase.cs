@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Huach.Admin.Models.Basic
+namespace Huach.Admin.Models
 {
     /// <summary>
     /// 实体类基类
@@ -22,9 +22,7 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 创建人
         /// </summary>
-        [StringLength(50)]
-        [Column(TypeName = "varchar")]
-        public string CreateBy { get; set; }
+        public int CreateBy { get; set; }
         /// <summary>
         /// 修改时间
         /// </summary>
@@ -32,9 +30,7 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 修改人
         /// </summary>
-        [StringLength(50)]
-        [Column(TypeName = "varchar")]
-        public string ModifyBy { get; set; }
+        public int ModifyBy { get; set; }
         /// <summary>
         /// 状态
         /// </summary>
@@ -47,7 +43,7 @@ namespace Huach.Admin.Models.Basic
             /// </summary>
             Normal = 1,
             /// <summary>
-            /// 取消
+            /// 禁用
             /// </summary>
             Disable = 0
         }

@@ -4,9 +4,64 @@
         <name>Huach.Admin.ViewModels</name>
     </assembly>
     <members>
-        <member name="T:Huach.Admin.ViewModels.BaseRequest">
+        <member name="T:Huach.Admin.ViewModels.Base.BaseResponse">
+            <summary>
+            响应基类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Base.BasePagingResponse`1">
+            <summary>
+            分页响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingResponse`1.Total">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingResponse`1.Count">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingResponse`1.Items">
+            <summary>
+            记录集合
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Base.BaseItemResponse">
+            <summary>
+            响应列表项
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Base.BaseRequest">
             <summary>
             请求基类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Base.BasePagingRequest">
+            <summary>
+            分页请求
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingRequest.PageIndex">
+            <summary>
+            页数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingRequest.PageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingRequest.Direction">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingRequest.SortField">
+            <summary>
+            排序字段
             </summary>
         </member>
         <member name="T:Huach.Admin.ViewModels.UserInfo">
@@ -17,6 +72,11 @@
         <member name="P:Huach.Admin.ViewModels.UserInfo.UserName">
             <summary>
             用户名称
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.UserInfo.Id">
+            <summary>
+            用户id
             </summary>
         </member>
         <member name="P:Huach.Admin.ViewModels.UserInfo.Mobile">

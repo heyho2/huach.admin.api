@@ -1,4 +1,4 @@
-using Huach.Admin.ViewModels;
+using Huach.Admin.ViewModels.Base;
 using Huach.Api.SwaggerExtensions;
 using Swashbuckle.Application;
 using System.Reflection;

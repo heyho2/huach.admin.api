@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Huach.Admin.ViewModels
+namespace Huach.Admin.ViewModels.Basic
 {
-    /// <summary>
-    /// 请求基类
-    /// </summary>
-    public class BaseRequest
+    class Class1
     {
     }
 }

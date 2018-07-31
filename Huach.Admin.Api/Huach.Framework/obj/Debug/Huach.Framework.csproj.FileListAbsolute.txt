@@ -34,8 +34,8 @@ E:\Project\huach.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Framework.p
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\bin\Debug\Huach.Framework.dll.config
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\bin\Debug\Huach.Framework.dll
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\bin\Debug\Huach.Framework.pdb
-E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Framework.csprojAssemblyReference.cache
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Framework.csproj.CoreCompileInputs.cache
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Framework.csproj.CopyComplete
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Framework.dll
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Framework.pdb
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Framework.csprojAssemblyReference.cache

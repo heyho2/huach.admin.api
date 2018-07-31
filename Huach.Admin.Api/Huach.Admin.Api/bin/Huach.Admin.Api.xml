@@ -14,6 +14,163 @@
             用户信息
             </summary>
         </member>
+        <member name="M:Huach.Admin.Api.Controllers.BaseApiController`1.Delete(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysDictionaryController">
+            <summary>
+            SysDictionaryController 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysDictionaryTypeController">
+            <summary>
+            SysDictionaryTypeController 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysMenuController">
+            <summary>
+            SysMenuController 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysMenuRoleController">
+            <summary>
+            SysMenuRoleController 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysRegionController">
+            <summary>
+            SysRegionController 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysRoleController">
+            <summary>
+            SysRoleController 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserController">
+            <summary>
+            SysUserController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Delete(Huach.Admin.Api.Controllers.Basic.SysUserDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Add(Huach.Admin.Api.Controllers.Basic.SysUserAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Update(Huach.Admin.Api.Controllers.Basic.SysUserUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Find(Huach.Admin.Api.Controllers.Basic.SysUserFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Search(Huach.Admin.Api.Controllers.Basic.SysUserSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.Api.Controllers.Basic.SysUserDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.Api.Controllers.Basic.SysUserUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.Api.Controllers.Basic.SysUserUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.Api.Controllers.Basic.SysUserFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.Api.Controllers.Basic.SysUserFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.Api.Controllers.Basic.SysUserSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserRoleController">
+            <summary>
+            SysUserRoleController 
+            </summary>
+        </member>
         <member name="T:Huach.Admin.Api.Controllers.TokenController">
             <summary>
             用户登录 Token
@@ -25,24 +182,6 @@
             </summary>
             <param name="userIdentification">用户名</param>
             <param name="password">密码</param>
-            <returns></returns>
-        </member>
-        <member name="T:Huach.Admin.Api.Controllers.SysUserController">
-            <summary>
-            用户
-            </summary>
-        </member>
-        <member name="M:Huach.Admin.Api.Controllers.SysUserController.Get(System.Int32)">
-            <summary>
-            获取用户
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Huach.Admin.Api.Controllers.SysUserController.Error2(System.String)">
-            <summary>
-            异常测试
-            </summary>
-            <param name="hahah"></param>
             <returns></returns>
         </member>
         <member name="P:Huach.Admin.Api.Filters.JwtAuthFilterAttribute.Secret">
