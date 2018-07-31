@@ -144,12 +144,19 @@
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\Basic\SysDictionaryController.cs" />
     <Compile Include="Controllers\Basic\SysDictionaryTypeController.cs" />
+    <Compile Include="Controllers\Basic\SysLogsController.cs" />
     <Compile Include="Controllers\Basic\SysMenuController.cs" />
     <Compile Include="Controllers\Basic\SysMenuRoleController.cs" />
     <Compile Include="Controllers\Basic\SysRegionController.cs" />
     <Compile Include="Controllers\Basic\SysRoleController.cs" />
     <Compile Include="Controllers\Basic\SysUserController.cs" />
     <Compile Include="Controllers\Basic\SysUserRoleController.cs" />
+    <Compile Include="Controllers\Business\AdvertisingImageController.cs" />
+    <Compile Include="Controllers\Business\CompanyController.cs" />
+    <Compile Include="Controllers\Business\NewsController.cs" />
+    <Compile Include="Controllers\Business\ProductAttrController.cs" />
+    <Compile Include="Controllers\Business\ProductController.cs" />
+    <Compile Include="Controllers\Business\ProductTypeController.cs" />
     <Compile Include="Controllers\TokenController.cs" />
     <Compile Include="Filters\CustomExceptionFilterAttribute.cs" />
     <Compile Include="Filters\JwtAuthFilterAttribute.cs" />
@@ -197,6 +204,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

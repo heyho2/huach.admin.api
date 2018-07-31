@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Huach.Admin.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,10 +29,10 @@ namespace Huach.Admin.ViewModels.Base
         /// <summary>
         /// 排序方向
         /// </summary>
-        public string Direction { get; set; }
+        public string Direction { get; set; } = "Desc";
         /// <summary>
         /// 排序字段
         /// </summary>
-        public string SortField { get; set; }
+        public string SortField { get; set; } = nameof(ModelBase.Id);
     }
 }

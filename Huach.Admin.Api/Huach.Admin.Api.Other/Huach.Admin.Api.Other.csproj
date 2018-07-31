@@ -40,15 +40,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\AdvertisingImageController.cs">
+      <DependentUpon>Controller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\CompanyController.cs">
+      <DependentUpon>Controller.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controller\Controller.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>Controller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\NewsController.cs">
+      <DependentUpon>Controller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ProductAttrController.cs">
+      <DependentUpon>Controller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ProductController.cs">
+      <DependentUpon>Controller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ProductTypeController.cs">
       <DependentUpon>Controller.tt</DependentUpon>
     </Compile>
     <Compile Include="Controller\SysDictionaryController.cs">
       <DependentUpon>Controller.tt</DependentUpon>
     </Compile>
     <Compile Include="Controller\SysDictionaryTypeController.cs">
+      <DependentUpon>Controller.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\SysLogsController.cs">
       <DependentUpon>Controller.tt</DependentUpon>
     </Compile>
     <Compile Include="Controller\SysMenuController.cs">
@@ -69,6 +90,24 @@
     <Compile Include="Controller\SysUserRoleController.cs">
       <DependentUpon>Controller.tt</DependentUpon>
     </Compile>
+    <Compile Include="IRepository\IAdvertisingImageRepository.cs">
+      <DependentUpon>IRepository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IRepository\ICompanyRepository.cs">
+      <DependentUpon>IRepository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IRepository\INewsRepository.cs">
+      <DependentUpon>IRepository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IRepository\IProductAttrRepository.cs">
+      <DependentUpon>IRepository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IRepository\IProductRepository.cs">
+      <DependentUpon>IRepository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IRepository\IProductTypeRepository.cs">
+      <DependentUpon>IRepository.tt</DependentUpon>
+    </Compile>
     <Compile Include="IRepository\IRepository.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,6 +117,9 @@
       <DependentUpon>IRepository.tt</DependentUpon>
     </Compile>
     <Compile Include="IRepository\ISysDictionaryTypeRepository.cs">
+      <DependentUpon>IRepository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IRepository\ISysLogsRepository.cs">
       <DependentUpon>IRepository.tt</DependentUpon>
     </Compile>
     <Compile Include="IRepository\ISysMenuRepository.cs">
@@ -99,6 +141,24 @@
       <DependentUpon>IRepository.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AdvertisingImageRepository.cs">
+      <DependentUpon>Repository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\CompanyRepository.cs">
+      <DependentUpon>Repository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\NewsRepository.cs">
+      <DependentUpon>Repository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\ProductAttrRepository.cs">
+      <DependentUpon>Repository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\ProductRepository.cs">
+      <DependentUpon>Repository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\ProductTypeRepository.cs">
+      <DependentUpon>Repository.tt</DependentUpon>
+    </Compile>
     <Compile Include="Repository\Repository.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,6 +168,9 @@
       <DependentUpon>Repository.tt</DependentUpon>
     </Compile>
     <Compile Include="Repository\SysDictionaryTypeRepository.cs">
+      <DependentUpon>Repository.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\SysLogsRepository.cs">
       <DependentUpon>Repository.tt</DependentUpon>
     </Compile>
     <Compile Include="Repository\SysMenuRepository.cs">
@@ -128,6 +191,124 @@
     <Compile Include="Repository\SysUserRoleRepository.cs">
       <DependentUpon>Repository.tt</DependentUpon>
     </Compile>
+    <Compile Include="Request\AdvertisingImageRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\CompanyRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\NewsRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\ProductAttrRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\ProductRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\ProductTypeRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\Request.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\SysDictionaryRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\SysDictionaryTypeRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\SysLogsRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\SysMenuRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\SysMenuRoleRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\SysRegionRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\SysRoleRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\SysUserRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Request\SysUserRoleRequest.cs">
+      <DependentUpon>Request.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\AdvertisingImageResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\CompanyResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\NewsResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\ProductAttrResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\ProductResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\ProductTypeResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\Response.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\SysDictionaryResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\SysDictionaryTypeResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\SysLogsResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\SysMenuResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\SysMenuRoleResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\SysRegionResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\SysRoleResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\SysUserResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Response\SysUserRoleResponse.cs">
+      <DependentUpon>Response.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Serivce\AdvertisingImageService.cs">
+      <DependentUpon>Serivce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Serivce\CompanyService.cs">
+      <DependentUpon>Serivce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Serivce\NewsService.cs">
+      <DependentUpon>Serivce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Serivce\ProductAttrService.cs">
+      <DependentUpon>Serivce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Serivce\ProductService.cs">
+      <DependentUpon>Serivce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Serivce\ProductTypeService.cs">
+      <DependentUpon>Serivce.tt</DependentUpon>
+    </Compile>
     <Compile Include="Serivce\Serivce.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -137,6 +318,9 @@
       <DependentUpon>Serivce.tt</DependentUpon>
     </Compile>
     <Compile Include="Serivce\SysDictionaryTypeService.cs">
+      <DependentUpon>Serivce.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Serivce\SysLogsService.cs">
       <DependentUpon>Serivce.tt</DependentUpon>
     </Compile>
     <Compile Include="Serivce\SysMenuRoleService.cs">
@@ -171,6 +355,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Repository.cs</LastGenOutput>
     </Content>
+    <Content Include="Request\Request.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Request.cs</LastGenOutput>
+    </Content>
+    <Content Include="Response\Response.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Response.cs</LastGenOutput>
+    </Content>
     <Content Include="Serivce\Serivce.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Serivce.cs</LastGenOutput>
@@ -188,5 +380,6 @@
       <Name>Huach.Admin.Models</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

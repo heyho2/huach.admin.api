@@ -27,9 +27,10 @@
 #>
 using Huach.Admin.Models<#= info.Space#>;
 using Huach.Admin.Service<#= info.Space#>;
+using Huach.Admin.ViewModels<#= info.Space#>;
 using Huach.Framework.Models;
 using System;
-using System.Linq;
+using System.Linq.Expressions;
 using System.Web.Http;
 using System.Web.Http.Description;
 namespace Huach.Admin.Api.Controllers<#= info.Space#>
@@ -44,6 +45,135 @@ namespace Huach.Admin.Api.Controllers<#= info.Space#>
 		{
 			_<#=entityNameXiao#>Service = <#=entityNameXiao#>Service;
 		}
+		
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [ResponseType(typeof(ActionResult<int>)), HttpGet]
+        public virtual IHttpActionResult Delete([FromUri]<#=entityName#>DeleteRequest request)
+        {
+            var result = _<#=entityNameXiao#>Service.Delete(a => a.Id == request.Id);
+            if (result > 0)
+            {
+                return Succeed(result, "删除成功");
+            }
+            else
+            {
+                return Fail("删除失败");
+            }
+        }
+        /// <summary>
+        /// 添加
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [ResponseType(typeof(ActionResult<<#=entityName#>AddResponse>)), HttpPost]
+        public virtual IHttpActionResult Add(<#=entityName#>AddRequest request)
+        {
+            var entity = new <#=entityName#>
+            {
+
+            };
+            var result = _<#=entityNameXiao#>Service.Add(entity);
+            if (result > 0)
+            {
+                return Succeed(new <#=entityName#>AddResponse
+                {
+                    Id = entity.Id
+                }, "新增成功");
+            }
+            else
+            {
+                return Fail("新增失败");
+            }
+        }
+        /// <summary>
+        /// 修改（注意：没有修改的也要将原来的数据传回）
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [ResponseType(typeof(ActionResult<<#=entityName#>UpdateResponse>)), HttpPost]
+        public virtual IHttpActionResult Update(<#=entityName#>UpdateRequest request)
+        {
+            var entity = new <#=entityName#>
+            {
+                Id = request.Id,
+            };
+            var result = _<#=entityNameXiao#>Service.Update(entity);
+            if (result > 0)
+            {
+                return Succeed(new <#=entityName#>UpdateResponse
+                {
+                    Id = entity.Id
+                }, "新增成功");
+            }
+            else
+            {
+                return Fail("新增失败");
+            }
+        }
+        /// <summary>
+        /// 根据id查询
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [ResponseType(typeof(ActionResult<<#=entityName#>FindResponse>)), HttpGet]
+        public virtual IHttpActionResult Find([FromUri]<#=entityName#>FindRequest request)
+        {
+            var result = _<#=entityNameXiao#>Service.Find(request.Id);
+            if (result == null)
+            {
+                return Fail("抱歉，没查到数据");
+            }
+            return Succeed(new <#=entityName#>FindResponse
+            {
+                Id = result.Id
+            });
+        }
+        /// <summary>
+        /// 分页查询
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [ResponseType(typeof(ActionResult<<#=entityName#>SearchResponse>)), HttpGet]
+        public virtual IHttpActionResult Search([FromUri]<#=entityName#>SearchRequest request)
+        {
+            Expression<Func<<#=entityName#>, bool>> expression = a => true;
+            var result = _<#=entityNameXiao#>Service.LoadPaging(expression, a => new <#=entityName#>SearchItem
+            {
+
+            }, request);
+            return Succeed(new <#=entityName#>SearchResponse
+            {
+                Count = result.Count,
+                Items = result.Items,
+                Total = result.Total,
+            });
+        }
+        /// <summary>
+        /// 禁用（逻辑删除）
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [ResponseType(typeof(ActionResult<int>)), HttpGet]
+        public virtual IHttpActionResult Disable(<#=entityName#>DisableRequest request)
+        {
+            var entity = new <#=entityName#>
+            {
+                Id = request.Id,
+            };
+            var result = _<#=entityNameXiao#>Service.Disable(request.Id);
+            if (result > 0)
+            {
+                return Succeed("禁用成功");
+            }
+            else
+            {
+                return Fail("禁用失败");
+            }
+        }
     }
 }
     

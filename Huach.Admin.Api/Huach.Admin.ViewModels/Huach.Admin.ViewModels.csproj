@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,10 +44,44 @@
   <ItemGroup>
     <Compile Include="Base\BaseResponse.cs" />
     <Compile Include="Base\BaseRequest.cs" />
-    <Compile Include="Basic\Class1.cs" />
+    <Compile Include="Basic\SysDictionaryRequest.cs" />
+    <Compile Include="Basic\SysDictionaryResponse.cs" />
+    <Compile Include="Basic\SysDictionaryTypeRequest.cs" />
+    <Compile Include="Basic\SysDictionaryTypeResponse.cs" />
+    <Compile Include="Basic\SysLogsRequest.cs" />
+    <Compile Include="Basic\SysLogsResponse.cs" />
+    <Compile Include="Basic\SysMenuRequest.cs" />
+    <Compile Include="Basic\SysMenuResponse.cs" />
+    <Compile Include="Basic\SysMenuRoleRequest.cs" />
+    <Compile Include="Basic\SysMenuRoleResponse.cs" />
+    <Compile Include="Basic\SysRegionRequest.cs" />
+    <Compile Include="Basic\SysRegionResponse.cs" />
+    <Compile Include="Basic\SysRoleRequest.cs" />
+    <Compile Include="Basic\SysRoleResponse.cs" />
+    <Compile Include="Basic\SysUserResponse.cs" />
+    <Compile Include="Basic\SysUserRequest.cs" />
+    <Compile Include="Basic\SysUserRoleRequest.cs" />
+    <Compile Include="Basic\SysUserRoleResponse.cs" />
+    <Compile Include="Business\AdvertisingImageRequest.cs" />
+    <Compile Include="Business\AdvertisingImageResponse.cs" />
+    <Compile Include="Business\CompanyRequest.cs" />
+    <Compile Include="Business\CompanyResponse.cs" />
+    <Compile Include="Business\NewsRequest.cs" />
+    <Compile Include="Business\NewsResponse.cs" />
+    <Compile Include="Business\ProductAttrRequest.cs" />
+    <Compile Include="Business\ProductAttrResponse.cs" />
+    <Compile Include="Business\ProductRequest.cs" />
+    <Compile Include="Business\ProductResponse.cs" />
+    <Compile Include="Business\ProductTypeRequest.cs" />
+    <Compile Include="Business\ProductTypeResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Huach.Admin.Models\Huach.Admin.Models.csproj">
+      <Project>{2371D43A-98EC-4609-B7E0-83B70D28729D}</Project>
+      <Name>Huach.Admin.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -30,7 +31,7 @@ namespace Huach.Admin.Models
         /// <summary>
         /// 修改人
         /// </summary>
-        public int ModifyBy { get; set; }
+        public Nullable<int> ModifyBy { get; set; }
         /// <summary>
         /// 状态
         /// </summary>
@@ -41,10 +42,12 @@ namespace Huach.Admin.Models
             /// <summary>
             /// 正常
             /// </summary>
+            [Description("正常")]
             Normal = 1,
             /// <summary>
             /// 禁用
             /// </summary>
+            [Description("禁用")]
             Disable = 0
         }
     }

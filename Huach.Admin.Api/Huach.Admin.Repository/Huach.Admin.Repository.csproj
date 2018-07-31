@@ -47,11 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basic\SysLogsRepository.cs" />
     <Compile Include="Basic\SysMenuRepository.cs" />
     <Compile Include="Basic\SysMenuRoleRepository.cs" />
     <Compile Include="Basic\SysRegionRepository.cs" />
     <Compile Include="Basic\SysRoleRepository.cs" />
     <Compile Include="Basic\SysUserRoleRepository.cs" />
+    <Compile Include="Business\AdvertisingImageRepository.cs" />
+    <Compile Include="Business\CompanyRepository.cs" />
+    <Compile Include="Business\NewsRepository.cs" />
+    <Compile Include="Business\ProductAttrRepository.cs" />
+    <Compile Include="Business\ProductRepository.cs" />
+    <Compile Include="Business\ProductTypeRepository.cs" />
     <Compile Include="EFContextFactory.cs" />
     <Compile Include="HuachContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -79,5 +86,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

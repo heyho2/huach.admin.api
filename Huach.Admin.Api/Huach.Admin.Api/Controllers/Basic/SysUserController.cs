@@ -1,28 +1,26 @@
 using Huach.Admin.Models.Basic;
 using Huach.Admin.Service.Basic;
-using Huach.Admin.ViewModels.Base;
+using Huach.Admin.ViewModels.Basic;
 using Huach.Framework.Models;
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Web.Http;
 using System.Web.Http.Description;
 namespace Huach.Admin.Api.Controllers.Basic
-{
+{    
     /// <summary>
     /// SysUserController 
     /// </summary>
-    public class SysUserController : BaseApiController
-    {
-        private readonly SysUserService _sysUserService;
-        public SysUserController(SysUserService sysUserService)
-        {
-            _sysUserService = sysUserService;
-        }
-
+    public class SysUserController: BaseApiController 
+    {    
+		private readonly SysUserService _sysUserService;
+		public SysUserController(SysUserService sysUserService)
+		{
+			_sysUserService = sysUserService;
+		}
+		
         /// <summary>
-        /// É¾³ı
+        /// åˆ é™¤
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -32,15 +30,15 @@ namespace Huach.Admin.Api.Controllers.Basic
             var result = _sysUserService.Delete(a => a.Id == request.Id);
             if (result > 0)
             {
-                return Succeed(result, "É¾³ı³É¹¦");
+                return Succeed(result, "åˆ é™¤æˆåŠŸ");
             }
             else
             {
-                return Fail("É¾³ıÊ§°Ü");
+                return Fail("åˆ é™¤å¤±è´¥");
             }
         }
         /// <summary>
-        /// Ìí¼Ó
+        /// æ·»åŠ 
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -57,15 +55,15 @@ namespace Huach.Admin.Api.Controllers.Basic
                 return Succeed(new SysUserAddResponse
                 {
                     Id = entity.Id
-                }, "ĞÂÔö³É¹¦");
+                }, "æ–°å¢æˆåŠŸ");
             }
             else
             {
-                return Fail("ĞÂÔöÊ§°Ü");
+                return Fail("æ–°å¢å¤±è´¥");
             }
         }
         /// <summary>
-        /// ĞŞ¸Ä£¨×¢Òâ£ºÃ»ÓĞĞŞ¸ÄµÄÒ²Òª½«Ô­À´µÄÊı¾İ´«»Ø£©
+        /// ä¿®æ”¹ï¼ˆæ³¨æ„ï¼šæ²¡æœ‰ä¿®æ”¹çš„ä¹Ÿè¦å°†åŸæ¥çš„æ•°æ®ä¼ å›ï¼‰
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -82,15 +80,15 @@ namespace Huach.Admin.Api.Controllers.Basic
                 return Succeed(new SysUserUpdateResponse
                 {
                     Id = entity.Id
-                }, "ĞÂÔö³É¹¦");
+                }, "æ–°å¢æˆåŠŸ");
             }
             else
             {
-                return Fail("ĞÂÔöÊ§°Ü");
+                return Fail("æ–°å¢å¤±è´¥");
             }
         }
         /// <summary>
-        /// ¸ù¾İid²éÑ¯
+        /// æ ¹æ®idæŸ¥è¯¢
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -100,7 +98,7 @@ namespace Huach.Admin.Api.Controllers.Basic
             var result = _sysUserService.Find(request.Id);
             if (result == null)
             {
-                return Fail("±§Ç¸£¬Ã»²éµ½Êı¾İ");
+                return Fail("æŠ±æ­‰ï¼Œæ²¡æŸ¥åˆ°æ•°æ®");
             }
             return Succeed(new SysUserFindResponse
             {
@@ -108,7 +106,7 @@ namespace Huach.Admin.Api.Controllers.Basic
             });
         }
         /// <summary>
-        /// ·ÖÒ³²éÑ¯
+        /// åˆ†é¡µæŸ¥è¯¢
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
@@ -127,101 +125,28 @@ namespace Huach.Admin.Api.Controllers.Basic
                 Total = result.Total,
             });
         }
-
-
-    }
-
-
-
-    /// <summary>
-    /// É¾³ıÇëÇó²ÎÊı
-    /// </summary>
-    public class SysUserDeleteRequest : BaseRequest
-    {
         /// <summary>
-        /// id ±ØÌî
+        /// ç¦ç”¨ï¼ˆé€»è¾‘åˆ é™¤ï¼‰
         /// </summary>
-        [Required]
-        public int Id { get; set; }
-    }
-    /// <summary>
-    /// É¾³ıÏìÓ¦
-    /// </summary>
-    public class SysUserDeleteResponse : BaseResponse
-    {
-    }
-    /// <summary>
-    /// Ìí¼ÓÇëÇó²ÎÊı
-    /// </summary>
-    public class SysUserAddRequest : BaseRequest
-    {
-
-    }
-    /// <summary>
-    /// Ìí¼ÓÏìÓ¦
-    /// </summary>
-    public class SysUserAddResponse : BaseResponse
-    {
-        public int Id { get; set; }
-    }
-    public class SysUserUpdateRequest : BaseRequest
-    {
-        /// <summary>
-        /// id ±ØÌî
-        /// </summary>
-        [Required]
-        public int Id { get; set; }
-    }
-
-    public class SysUserUpdateResponse : BaseResponse
-    {
-        /// <summary>
-        /// id
-        /// </summary>
-        public int Id { get; set; }
-    }
-    /// <summary>
-    /// É¾³ıÇëÇó²ÎÊı
-    /// </summary>
-    public class SysUserFindRequest : BaseRequest
-    {
-        /// <summary>
-        /// id ±ØÌî
-        /// </summary>
-        [Required]
-        public int Id { get; set; }
-    }
-    /// <summary>
-    /// É¾³ıÏìÓ¦
-    /// </summary>
-    public class SysUserFindResponse : BaseResponse
-    {
-        /// <summary>
-        /// id 
-        /// </summary>
-        public int Id { get; set; }
-    }
-    /// <summary>
-    /// ËÑË÷ÇëÇó²ÎÊı
-    /// </summary>
-    public class SysUserSearchRequest : BasePagingRequest
-    {
-    }
-    /// <summary>
-    /// ²éÑ¯ÇëÇó²ÎÊıÀà
-    /// </summary>
-    public class SysUserSearchResponse : BasePagingResponse<SysUserSearchItem>
-    {
-    }
-    /// <summary>
-    /// ²éÑ¯ÏìÓ¦
-    /// </summary>
-    public class SysUserSearchItem : BaseItemResponse
-    {
-        /// <summary>
-        /// id
-        /// </summary>
-        public object Id { get; set; }
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [ResponseType(typeof(ActionResult<int>)), HttpGet]
+        public virtual IHttpActionResult Disable(SysUserDisableRequest request)
+        {
+            var entity = new SysUser
+            {
+                Id = request.Id,
+            };
+            var result = _sysUserService.Disable(request.Id);
+            if (result > 0)
+            {
+                return Succeed("ç¦ç”¨æˆåŠŸ");
+            }
+            else
+            {
+                return Fail("ç¦ç”¨å¤±è´¥");
+            }
+        }
     }
 }
-
+    

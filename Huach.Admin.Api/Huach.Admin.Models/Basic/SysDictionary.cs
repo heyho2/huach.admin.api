@@ -21,11 +21,10 @@ namespace Huach.Admin.Models.Basic
         /// </summary>
         [StringLength(50)]
         public string TypeCode { get; set; }
-
         /// <summary>
         /// 父id
         /// </summary>
-        public int PId { get; set; }
+        public int ParentId { get; set; }
         /// <summary>
         /// 排序 
         /// </summary>

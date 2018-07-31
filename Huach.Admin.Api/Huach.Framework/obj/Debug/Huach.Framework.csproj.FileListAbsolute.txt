@@ -38,4 +38,3 @@ E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Frame
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Framework.csproj.CopyComplete
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Framework.dll
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Framework.pdb
-E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Framework\obj\Debug\Huach.Framework.csprojAssemblyReference.cache

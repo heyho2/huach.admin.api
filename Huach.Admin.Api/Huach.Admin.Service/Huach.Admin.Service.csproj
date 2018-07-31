@@ -51,11 +51,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Basic\SysDictionaryTypeService.cs" />
+    <Compile Include="Basic\SysLogsService.cs" />
     <Compile Include="Basic\SysMenuRoleService.cs" />
     <Compile Include="Basic\SysMenuService.cs" />
     <Compile Include="Basic\SysRegionService.cs" />
     <Compile Include="Basic\SysRoleService.cs" />
     <Compile Include="Basic\SysUserRoleService.cs" />
+    <Compile Include="Business\AdvertisingImageService.cs" />
+    <Compile Include="Business\CompanyService.cs" />
+    <Compile Include="Business\NewsService.cs" />
+    <Compile Include="Business\ProductAttrService.cs" />
+    <Compile Include="Business\ProductService.cs" />
+    <Compile Include="Business\ProductTypeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceBase.cs" />
     <Compile Include="Basic\SysDictionaryService.cs" />
@@ -83,5 +90,6 @@
       <Name>Huach.Framework</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

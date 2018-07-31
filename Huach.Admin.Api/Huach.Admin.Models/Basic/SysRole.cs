@@ -15,7 +15,7 @@ namespace Huach.Admin.Models.Basic
         /// 角色名称
         /// </summary>
         [StringLength(50), Required]
-        public string RoleName { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// 描述
         /// </summary>

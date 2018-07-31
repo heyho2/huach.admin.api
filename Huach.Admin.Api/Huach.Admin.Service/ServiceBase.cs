@@ -56,9 +56,9 @@ namespace Huach.Admin.Service
             var resultItems = result.ToList();
             return new BasePagingResponse<TResult>
             {
-                Count= total,
-                Total= total% request.PageSize==0? total / request.PageSize: total / request.PageSize+1,
-                Items= resultItems
+                Count = total,
+                Total = total % request.PageSize == 0 ? total / request.PageSize : total / request.PageSize + 1,
+                Items = resultItems
             };
         }
         /// <summary>
@@ -103,6 +103,20 @@ namespace Huach.Admin.Service
             entity.ModifyBy = CurrentUser.Id;
             entity.ModifyDate = DateTime.Now;
             entity.Disable = (short)ModelBase.DisableEnum.Normal;
+            return _repository.Update(entity);
+        }
+        /// <summary>
+        /// 禁用
+        /// 注意：主键必须传回
+        /// </summary>
+        /// <param name="delLambda"></param>
+        /// <returns></returns>
+        public int Disable(int id)
+        {
+            var entity = _repository.Find(id);
+            entity.ModifyBy = CurrentUser.Id;
+            entity.ModifyDate = DateTime.Now;
+            entity.Disable = (short)ModelBase.DisableEnum.Disable;
             return _repository.Update(entity);
         }
     }

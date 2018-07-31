@@ -4,14 +4,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Huach.Admin.Models.Basic
 {
     [Table("sys_menu")]
-    public class SysMenu : ModelBase
+    public partial class SysMenu : ModelBase
     {
         /// <summary>
         /// 菜单名称
         /// </summary>
         [Required]
         [StringLength(100)]
-        public string MenuName { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// url
         /// </summary>
@@ -20,8 +20,12 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 父节点ID
         /// </summary>
-        [StringLength(128)]
-        public string ParentId { get; set; }
+        public int ParentId { get; set; }
+        /// <summary>
+        /// 上级地区
+        /// </summary>
+        [ForeignKey(nameof(ParentId))]
+        public SysMenu ParentMenu { get; set; }
         /// <summary>
         /// 排序
         /// </summary>
