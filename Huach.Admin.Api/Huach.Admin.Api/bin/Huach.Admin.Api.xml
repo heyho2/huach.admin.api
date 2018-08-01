@@ -14,6 +14,718 @@
             用户信息
             </summary>
         </member>
+        <member name="M:Huach.Admin.Api.Controllers.BaseApiController`1.Delete(System.Int32)">
+            <summary>
+            删除
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysDictionaryController">
+            <summary>
+            SysDictionaryController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryController.Delete(Huach.Admin.ViewModels.Basic.SysDictionaryDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryController.Add(Huach.Admin.ViewModels.Basic.SysDictionaryAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryController.Update(Huach.Admin.ViewModels.Basic.SysDictionaryUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryController.Find(Huach.Admin.ViewModels.Basic.SysDictionaryFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryController.Search(Huach.Admin.ViewModels.Basic.SysDictionarySearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryController.Disable(Huach.Admin.ViewModels.Basic.SysDictionaryDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysDictionaryTypeController">
+            <summary>
+            SysDictionaryTypeController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryTypeController.Delete(Huach.Admin.ViewModels.Basic.SysDictionaryTypeDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryTypeController.Add(Huach.Admin.ViewModels.Basic.SysDictionaryTypeAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryTypeController.Update(Huach.Admin.ViewModels.Basic.SysDictionaryTypeUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryTypeController.Find(Huach.Admin.ViewModels.Basic.SysDictionaryTypeFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryTypeController.Search(Huach.Admin.ViewModels.Basic.SysDictionaryTypeSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysDictionaryTypeController.Disable(Huach.Admin.ViewModels.Basic.SysDictionaryTypeDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysLogsController">
+            <summary>
+            SysLogsController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysLogsController.Delete(Huach.Admin.ViewModels.Basic.SysLogsDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysLogsController.Add(Huach.Admin.ViewModels.Basic.SysLogsAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysLogsController.Update(Huach.Admin.ViewModels.Basic.SysLogsUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysLogsController.Find(Huach.Admin.ViewModels.Basic.SysLogsFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysLogsController.Search(Huach.Admin.ViewModels.Basic.SysLogsSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysLogsController.Disable(Huach.Admin.ViewModels.Basic.SysLogsDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysMenuController">
+            <summary>
+            SysMenuController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuController.Delete(Huach.Admin.ViewModels.Basic.SysMenuDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuController.Add(Huach.Admin.ViewModels.Basic.SysMenuAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuController.Update(Huach.Admin.ViewModels.Basic.SysMenuUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuController.Find(Huach.Admin.ViewModels.Basic.SysMenuFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuController.Search(Huach.Admin.ViewModels.Basic.SysMenuSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuController.Disable(Huach.Admin.ViewModels.Basic.SysMenuDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysMenuRoleController">
+            <summary>
+            SysMenuRoleController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuRoleController.Delete(Huach.Admin.ViewModels.Basic.SysMenuRoleDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuRoleController.Add(Huach.Admin.ViewModels.Basic.SysMenuRoleAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuRoleController.Update(Huach.Admin.ViewModels.Basic.SysMenuRoleUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuRoleController.Find(Huach.Admin.ViewModels.Basic.SysMenuRoleFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuRoleController.Search(Huach.Admin.ViewModels.Basic.SysMenuRoleSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysMenuRoleController.Disable(Huach.Admin.ViewModels.Basic.SysMenuRoleDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysRegionController">
+            <summary>
+            SysRegionController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRegionController.Delete(Huach.Admin.ViewModels.Basic.SysRegionDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRegionController.Add(Huach.Admin.ViewModels.Basic.SysRegionAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRegionController.Update(Huach.Admin.ViewModels.Basic.SysRegionUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRegionController.Find(Huach.Admin.ViewModels.Basic.SysRegionFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRegionController.Search(Huach.Admin.ViewModels.Basic.SysRegionSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRegionController.Disable(Huach.Admin.ViewModels.Basic.SysRegionDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysRoleController">
+            <summary>
+            SysRoleController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRoleController.Delete(Huach.Admin.ViewModels.Basic.SysRoleDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRoleController.Add(Huach.Admin.ViewModels.Basic.SysRoleAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRoleController.Update(Huach.Admin.ViewModels.Basic.SysRoleUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRoleController.Find(Huach.Admin.ViewModels.Basic.SysRoleFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRoleController.Search(Huach.Admin.ViewModels.Basic.SysRoleSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysRoleController.Disable(Huach.Admin.ViewModels.Basic.SysRoleDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserController">
+            <summary>
+            SysUserController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Delete(Huach.Admin.ViewModels.Basic.SysUserDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Add(Huach.Admin.ViewModels.Basic.SysUserAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Update(Huach.Admin.ViewModels.Basic.SysUserUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Find(Huach.Admin.ViewModels.Basic.SysUserFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Search(Huach.Admin.ViewModels.Basic.SysUserSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Disable(Huach.Admin.ViewModels.Basic.SysUserDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.SysUserRoleController">
+            <summary>
+            SysUserRoleController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserRoleController.Delete(Huach.Admin.ViewModels.Basic.SysUserRoleDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserRoleController.Add(Huach.Admin.ViewModels.Basic.SysUserRoleAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserRoleController.Update(Huach.Admin.ViewModels.Basic.SysUserRoleUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserRoleController.Find(Huach.Admin.ViewModels.Basic.SysUserRoleFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserRoleController.Search(Huach.Admin.ViewModels.Basic.SysUserRoleSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserRoleController.Disable(Huach.Admin.ViewModels.Basic.SysUserRoleDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.NewsController">
+            <summary>
+            NewsController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.NewsController.Delete(Huach.Admin.ViewModels.Basic.NewsDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.NewsController.Add(Huach.Admin.ViewModels.Basic.NewsAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.NewsController.Update(Huach.Admin.ViewModels.Basic.NewsUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.NewsController.Find(Huach.Admin.ViewModels.Basic.NewsFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.NewsController.Search(Huach.Admin.ViewModels.Basic.NewsSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.NewsController.Disable(Huach.Admin.ViewModels.Basic.NewsDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.ProductAttrController">
+            <summary>
+            ProductAttrController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductAttrController.Delete(Huach.Admin.ViewModels.Basic.ProductAttrDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductAttrController.Add(Huach.Admin.ViewModels.Basic.ProductAttrAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductAttrController.Update(Huach.Admin.ViewModels.Basic.ProductAttrUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductAttrController.Find(Huach.Admin.ViewModels.Basic.ProductAttrFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductAttrController.Search(Huach.Admin.ViewModels.Basic.ProductAttrSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductAttrController.Disable(Huach.Admin.ViewModels.Basic.ProductAttrDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.ProductController">
+            <summary>
+            ProductController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductController.Delete(Huach.Admin.ViewModels.Basic.ProductDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductController.Add(Huach.Admin.ViewModels.Basic.ProductAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductController.Update(Huach.Admin.ViewModels.Basic.ProductUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductController.Find(Huach.Admin.ViewModels.Basic.ProductFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductController.Search(Huach.Admin.ViewModels.Basic.ProductSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductController.Disable(Huach.Admin.ViewModels.Basic.ProductDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Basic.ProductTypeController">
+            <summary>
+            ProductTypeController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductTypeController.Delete(Huach.Admin.ViewModels.Basic.ProductTypeDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductTypeController.Add(Huach.Admin.ViewModels.Basic.ProductTypeAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductTypeController.Update(Huach.Admin.ViewModels.Basic.ProductTypeUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductTypeController.Find(Huach.Admin.ViewModels.Basic.ProductTypeFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductTypeController.Search(Huach.Admin.ViewModels.Basic.ProductTypeSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.ProductTypeController.Disable(Huach.Admin.ViewModels.Basic.ProductTypeDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Business.AdvertisingImageController">
+            <summary>
+            AdvertisingImageController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.AdvertisingImageController.Delete(Huach.Admin.ViewModels.Business.AdvertisingImageDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.AdvertisingImageController.Add(Huach.Admin.ViewModels.Business.AdvertisingImageAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.AdvertisingImageController.Update(Huach.Admin.ViewModels.Business.AdvertisingImageUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.AdvertisingImageController.Find(Huach.Admin.ViewModels.Business.AdvertisingImageFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.AdvertisingImageController.Search(Huach.Admin.ViewModels.Business.AdvertisingImageSearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.AdvertisingImageController.Disable(Huach.Admin.ViewModels.Business.AdvertisingImageDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Huach.Admin.Api.Controllers.Business.CompanyController">
+            <summary>
+            CompanyController 
+            </summary>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.CompanyController.Delete(Huach.Admin.ViewModels.Business.CompanyDeleteRequest)">
+            <summary>
+            删除
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.CompanyController.Add(Huach.Admin.ViewModels.Business.CompanyAddRequest)">
+            <summary>
+            添加
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.CompanyController.Update(Huach.Admin.ViewModels.Business.CompanyUpdateRequest)">
+            <summary>
+            修改（注意：没有修改的也要将原来的数据传回）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.CompanyController.Find(Huach.Admin.ViewModels.Business.CompanyFindRequest)">
+            <summary>
+            根据id查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.CompanyController.Search(Huach.Admin.ViewModels.Business.CompanySearchRequest)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.Business.CompanyController.Disable(Huach.Admin.ViewModels.Business.CompanyDisableRequest)">
+            <summary>
+            禁用（逻辑删除）
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
         <member name="T:Huach.Admin.Api.Controllers.TokenController">
             <summary>
             用户登录 Token
@@ -25,24 +737,6 @@
             </summary>
             <param name="userIdentification">用户名</param>
             <param name="password">密码</param>
-            <returns></returns>
-        </member>
-        <member name="T:Huach.Admin.Api.Controllers.SysUserController">
-            <summary>
-            用户
-            </summary>
-        </member>
-        <member name="M:Huach.Admin.Api.Controllers.SysUserController.Get(System.Int32)">
-            <summary>
-            获取用户
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Huach.Admin.Api.Controllers.SysUserController.Error2(System.String)">
-            <summary>
-            异常测试
-            </summary>
-            <param name="hahah"></param>
             <returns></returns>
         </member>
         <member name="P:Huach.Admin.Api.Filters.JwtAuthFilterAttribute.Secret">

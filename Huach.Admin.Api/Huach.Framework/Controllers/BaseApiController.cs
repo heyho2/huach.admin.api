@@ -42,11 +42,19 @@ namespace Huach.Framework.Controllers
                 Msg = msg
             };
         }
-        protected virtual ActionResult<TData> Succeed<TData>(TData data = null, string msg = null) where TData : class
+        protected virtual ActionResult<TData> Succeed<TData>(TData data, string msg = null)
         {
             return new ActionResult<TData>
             {
                 Data = data,
+                Msg = msg
+            };
+        }
+        protected virtual ActionResult<TData> Succeed<TData>(string msg = null)
+        {
+            return new ActionResult<TData>
+            {
+                Data = default(TData),
                 Msg = msg
             };
         }

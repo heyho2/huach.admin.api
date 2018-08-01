@@ -48,3 +48,12 @@ E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\obj\Debug\Huach.A
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\obj\Debug\Huach.Admin.Service.csproj.CopyComplete
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\obj\Debug\Huach.Admin.Service.dll
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\obj\Debug\Huach.Admin.Service.pdb
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\bin\Debug\Huach.Admin.Service.dll.config
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\bin\Debug\Huach.Admin.ViewModels.dll
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\bin\Debug\Microsoft.Owin.dll
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\bin\Debug\Owin.dll
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\bin\Debug\Huach.Admin.ViewModels.pdb
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\bin\Debug\Huach.Admin.ViewModels.xml
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\bin\Debug\Microsoft.Owin.xml
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Service\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml

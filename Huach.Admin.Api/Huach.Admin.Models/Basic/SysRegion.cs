@@ -9,19 +9,18 @@ using System.Threading.Tasks;
 namespace Huach.Admin.Models.Basic
 {
     [Table("sys_region")]
-    public class SysRegion : ModelBase
+    public partial class SysRegion : ModelBase
     {
         /// <summary>
         /// 地区名称
         /// </summary>
-        [StringLength(50)]
+        [StringLength(50), Required]
         public string Name { get; set; }
 
         /// <summary>
         /// 区域行政代码
         /// </summary>
-        [StringLength(10)]
-        public string Code { get; set; }
+        public long Code { get; set; }
 
         /// <summary>
         /// 上级地区

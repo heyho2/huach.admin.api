@@ -1,5 +1,5 @@
 ﻿using Huach.Admin.IRepository;
-using Huach.Admin.Models.Basic;
+using Huach.Admin.Models;
 using Huach.Framework.Extend;
 using System;
 using System.Collections.Generic;
@@ -19,24 +19,14 @@ namespace Huach.Admin.Repository
 
         //获取的是当前线程内部的上下文实例，而且保证了线程内上下文唯一
         private DbContext db = EFContextFactory.GetCurrentDbContext;
-
-        /// <summary>
-        /// 实现对数据的分页查询
-        /// </summary>
-        /// <param name="pageIndex">当前第几页</param>
-        /// <param name="pageSize">一页显示多少条数据</param>
-        /// <param name="total">总条数</param>
-        /// <param name="whereLambda">查询条件</param>
-        /// <param name="Order">DESC/ASC</param>
-        /// <param name="Sort">排序字段</param>
-        /// <returns></returns>
-        public IQueryable<T> LoadPaging(Expression<Func<T, bool>> whereLambda, out int total, int pageIndex, int pageSize, string order, string sort)
+        
+        public IQueryable<TResult> LoadPaging<TResult>(Expression<Func<T, bool>> whereLambda, Expression<Func<T, TResult>> selector, out int total, int pageIndex, int pageSize, string order, string sort)
         {
             var temp = db.Set<T>().Where<T>(whereLambda);
             total = temp.Count();
-            temp = temp.SetQueryableOrder(sort, order).Skip<T>(pageSize * (pageIndex - 1))
-                     .Take<T>(pageSize).AsQueryable();
-            return temp.AsQueryable();
+            temp = temp.SetQueryableOrder(sort, order).Skip(pageSize * (pageIndex - 1))
+                     .Take(pageSize);
+            return temp.Select(selector).AsQueryable();
         }
 
         public int Add(T entity)

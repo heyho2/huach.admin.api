@@ -1,0 +1,1 @@
+2018-07-30 23:52:39,351 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块

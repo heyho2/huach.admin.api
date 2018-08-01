@@ -14,18 +14,17 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 类型编码
         /// </summary>
-        [StringLength(50)]
-        public string TypeCode { get; set; }
+        [StringLength(50), Required, Column(TypeName = "varchar")]
+        public string Code { get; set; }
         /// <summary>
         /// 类型名称
         /// </summary>
-        [StringLength(50)]
-        public string TypeName { get; set; }
+        [StringLength(50), Required, Column(TypeName = "varchar")]
+        public string Name { get; set; }
         /// <summary>
         /// 父节点ID
         /// </summary>
-        [StringLength(128)]
-        public string ParentId { get; set; }
+        public int ParentId { get; set; }
         /// <summary>
         /// 描述
         /// </summary>

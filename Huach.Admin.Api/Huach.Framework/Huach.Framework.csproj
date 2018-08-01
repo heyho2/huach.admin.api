@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extend\EnumExtension.cs" />
     <Compile Include="Models\ActionResult.cs" />
     <Compile Include="Auth\BaseAuthFilterAttribute.cs" />
     <Compile Include="Auth\BaseJwtAuthFilterAttribute.cs" />
@@ -110,6 +111,10 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Attributes\" />
+    <Folder Include="Image\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

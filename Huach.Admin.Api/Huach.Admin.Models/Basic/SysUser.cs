@@ -9,30 +9,30 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 用户名称
         /// </summary>
-        [StringLength(20)]
+        [StringLength(20), Required]
         [Column(TypeName = "varchar")]
         public string UserName { get; set; }
         /// <summary>
         /// 密码
         /// </summary>
-        [StringLength(18)]
+        [StringLength(18), Required]
         [Column(TypeName = "varchar")]
-        public string PassWord { get; set; }
+        public string Password { get; set; }
         /// <summary>
         /// 手机
         /// </summary>
-        [StringLength(11)]
+        [StringLength(11), Required]
         [Column(TypeName = "varchar")]
         public string Mobile { get; set; }
         /// <summary>
         /// 真实姓名
         /// </summary>
-        [StringLength(20)]
+        [StringLength(20), Required]
         public string RealName { get; set; }
         /// <summary>
         /// Email
         /// </summary>
-        [StringLength(50)]
+        [StringLength(50), Required]
         [Column(TypeName = "varchar")]
         public string Email { get; set; }
         /// <summary>
@@ -42,7 +42,7 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 头像
         /// </summary>
-        [StringLength(500)]
+        [StringLength(500), Required]
         [Column(TypeName = "varchar")]
         public string UserImg { get; set; }
         /// <summary>
@@ -58,9 +58,13 @@ namespace Huach.Admin.Models.Basic
         public string Addr { get; set; }
 
         /// <summary>
-        /// ip
+        /// 登陆Ip
         /// </summary>
-        [StringLength(20)]
+        [StringLength(20), Required]
         public string IP { get; set; }
+        /// <summary>
+        /// 父节点
+        /// </summary>
+        public int ParentId { get; set; }
     }
 }

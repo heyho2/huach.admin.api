@@ -4,9 +4,1564 @@
         <name>Huach.Admin.ViewModels</name>
     </assembly>
     <members>
-        <member name="T:Huach.Admin.ViewModels.BaseRequest">
+        <member name="T:Huach.Admin.ViewModels.Base.BaseResponse">
+            <summary>
+            响应基类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Base.BasePagingResponse`1">
+            <summary>
+            分页响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingResponse`1.Total">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingResponse`1.Count">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingResponse`1.Items">
+            <summary>
+            记录集合
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Base.BaseItemResponse">
+            <summary>
+            响应列表项
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Base.BaseRequest">
             <summary>
             请求基类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Base.BasePagingRequest">
+            <summary>
+            分页请求
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingRequest.PageIndex">
+            <summary>
+            页数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingRequest.PageSize">
+            <summary>
+            每页大小
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingRequest.Direction">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Base.BasePagingRequest.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionarySearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionarySearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionarySearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionarySearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryTypeDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryTypeUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryTypeFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryTypeDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryTypeAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryTypeUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryTypeFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryTypeSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysDictionaryTypeSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysLogsDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysLogsUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysLogsFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysLogsDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysLogsAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysLogsUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysLogsFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysLogsSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysLogsSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuRoleDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuRoleUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuRoleFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuRoleDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuRoleAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuRoleUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuRoleFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysMenuRoleSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysMenuRoleSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRegionDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRegionUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRegionFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRegionDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRegionAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRegionUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRegionFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRegionSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRegionSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRoleDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRoleUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRoleFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRoleDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRoleAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRoleUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRoleFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysRoleSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysRoleSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserRoleDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserRoleUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserRoleFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserRoleDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserRoleAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserRoleUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserRoleFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.SysUserRoleSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.SysUserRoleSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.NewsDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.NewsUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.NewsFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.NewsDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.NewsAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.NewsUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.NewsFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.NewsSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.NewsSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductAttrDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductAttrUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductAttrFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductAttrDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductAttrAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductAttrUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductAttrFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAttrSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductAttrSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductTypeDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductTypeUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductTypeFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductTypeDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductTypeAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductTypeUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductTypeFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.ProductTypeSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.ProductTypeSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.AdvertisingImageDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.AdvertisingImageUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.AdvertisingImageFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageSearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.AdvertisingImageDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.AdvertisingImageAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.AdvertisingImageUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.AdvertisingImageFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageSearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.AdvertisingImageSearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.AdvertisingImageSearchItem.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanyDeleteRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.CompanyDeleteRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanyAddRequest">
+            <summary>
+            添加请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanyUpdateRequest">
+            <summary>
+            更新参数类
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.CompanyUpdateRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanyFindRequest">
+            <summary>
+            删除请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.CompanyFindRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanySearchRequest">
+            <summary>
+            搜索请求参数
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanyDisableRequest">
+            <summary>
+            禁用请求参数
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.CompanyDisableRequest.Id">
+            <summary>
+            id 必填
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanyDeleteResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanyAddResponse">
+            <summary>
+            添加响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.CompanyAddResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanyUpdateResponse">
+            <summary>
+            更新响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.CompanyUpdateResponse.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanyFindResponse">
+            <summary>
+            删除响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.CompanyFindResponse.Id">
+            <summary>
+            id 
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanySearchResponse">
+            <summary>
+            查询请求参数类
+            </summary>
+        </member>
+        <member name="T:Huach.Admin.ViewModels.Business.CompanySearchItem">
+            <summary>
+            查询响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Business.CompanySearchItem.Id">
+            <summary>
+            id
             </summary>
         </member>
         <member name="T:Huach.Admin.ViewModels.UserInfo">
@@ -17,6 +1572,11 @@
         <member name="P:Huach.Admin.ViewModels.UserInfo.UserName">
             <summary>
             用户名称
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.UserInfo.Id">
+            <summary>
+            用户id
             </summary>
         </member>
         <member name="P:Huach.Admin.ViewModels.UserInfo.Mobile">

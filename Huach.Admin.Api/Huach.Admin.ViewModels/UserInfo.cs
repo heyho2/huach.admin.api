@@ -16,6 +16,10 @@ namespace Huach.Admin.ViewModels
         /// </summary>
         public string UserName { get; set; }
         /// <summary>
+        /// 用户id
+        /// </summary>
+        public int Id { get; set; }
+        /// <summary>
         /// 手机号
         /// </summary>
         public string Mobile { get; set; }

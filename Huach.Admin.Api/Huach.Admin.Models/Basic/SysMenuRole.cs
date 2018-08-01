@@ -14,22 +14,22 @@ namespace Huach.Admin.Models.Basic
         /// <summary>
         /// 角色ID
         /// </summary>
-        [StringLength(128), Required]
-        public string RoleId { get; set; }
+        [Required]
+        public int RoleId { get; set; }
         /// <summary>
         /// 菜单ID
         /// </summary>
-        [StringLength(128), Required]
-        public string MenuId { get; set; }
+        [Required]
+        public int MenuId { get; set; }
         /// <summary>
-        /// 描述
+        /// 导航SysMenu
         /// </summary>
-        [StringLength(1000)]
-        public string Description { get; set; }
+        [ForeignKey(nameof(MenuId))]
+        public SysMenu SysMenu { get; set; }
         /// <summary>
-        /// 按钮权限
+        /// 导航SysRole
         /// </summary>
-        [StringLength(128), Required]
-        public string BottunId { get; set; }
+        [ForeignKey(nameof(RoleId))]
+        public SysRole SysRole { get; set; }
     }
 }

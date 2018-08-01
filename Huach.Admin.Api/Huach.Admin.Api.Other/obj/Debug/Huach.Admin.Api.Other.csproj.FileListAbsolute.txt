@@ -1,0 +1,2 @@
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Api.Other\obj\Debug\Huach.Admin.Api.Other.csprojAssemblyReference.cache
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Api.Other\obj\Debug\Huach.Admin.Api.Other.csproj.CoreCompileInputs.cache

@@ -1,0 +1,140 @@
+﻿<#@ template debug="false" hostspecific="true" language="C#" #>
+<#@ include file="EF.Utility.CS.ttinclude"#>  
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.Linq" #>
+
+<#@ import namespace="System" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Reflection" #>
+<#@ output extension=".cs"#>
+<#@ include file="..\MultipleOutputHelper.ttinclude" #>
+<#
+	CodeGenerationTools code = new CodeGenerationTools(this);
+	MetadataLoader loader = new MetadataLoader(this);
+	CodeRegion region = new CodeRegion(this, 1);
+
+	ModelsTool modelsTool = new ModelsTool();
+
+    var manager = Manager.Create(Host, GenerationEnvironment);  
+	foreach(ModelsInfo info in modelsTool.Infos)
+    {    
+		var entityNames=info.Name.Split('_');
+		var entityName=string.Join("",entityNames.Where(a=>!string.IsNullOrWhiteSpace(a)).Select(a=>a.Substring(0,1).ToUpper()+a.Substring(1,a.Length-1)));
+		var className=entityName+"Response"; 
+        manager.StartNewFile(className+".cs");
+		var entityNameXiao= entityName.Substring(0,1).ToLower() + entityName.Substring(1);
+#>
+using Huach.Admin.ViewModels.Base;
+using Huach.Admin.ViewModels<#= info.Space#>;
+using System.ComponentModel.DataAnnotations;
+namespace Huach.Admin.ViewModels<#= info.Space#>
+{    
+	/// <summary>
+    /// 删除响应
+    /// </summary>
+    public class <#=entityName#>DeleteResponse : BaseResponse
+    {
+    }
+    /// <summary>
+    /// 添加响应
+    /// </summary>
+    public class <#=entityName#>AddResponse : BaseResponse
+    {
+        /// <summary>
+        /// id
+        /// </summary>
+        public int Id { get; set; }
+    }
+    /// <summary>
+    /// 更新响应
+    /// </summary>
+    public class <#=entityName#>UpdateResponse : BaseResponse
+    {
+        /// <summary>
+        /// id
+        /// </summary>
+        public int Id { get; set; }
+    }
+    /// <summary>
+    /// 删除响应
+    /// </summary>
+    public class <#=entityName#>FindResponse : BaseResponse
+    {
+        /// <summary>
+        /// id 
+        /// </summary>
+        public int Id { get; set; }
+    }
+    /// <summary>
+    /// 查询请求参数类
+    /// </summary>
+    public class <#=entityName#>SearchResponse : BasePagingResponse<<#=entityName#>SearchItem>
+    {
+    }
+    /// <summary>
+    /// 查询响应
+    /// </summary>
+    public class <#=entityName#>SearchItem : BaseItemResponse
+    {
+        /// <summary>
+        /// id
+        /// </summary>
+        public object Id { get; set; }
+    }
+}
+    
+<#
+    manager.EndBlock();    
+         }            
+    manager.Process(true);  
+#> 
+
+<#+
+public class ModelsTool
+{
+	public ModelsTool(string @namespace = "Huach.Admin.Models")
+	{
+        var classes = Assembly.LoadFrom(@"E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Api.Other\bin\Debug\Huach.Admin.Models.dll").GetTypes();
+        foreach (var item in classes)
+        {
+            if (item.BaseType.Name== "ModelBase"&&item.Name != "ModelBase")
+            {
+                var spaceJies = item.FullName.Split('.');
+                string space;
+                try
+                {
+                    space = spaceJies[@namespace.Split('.').Length];
+                }
+                catch (Exception)
+                {
+                    throw new Exception("谁命名空间不规范，来，我们谈谈！！");
+                }
+                if (space == item.Name)
+                {
+                    space = "";
+                }
+				else
+				{
+					space = "."+space;
+				}
+                _infos.Add(new ModelsInfo
+                {
+                    Name = item.Name,
+                    Space = space,
+                });
+            }
+        }
+    }
+    const string space = "Huach.Admin.{0}";
+    static List<ModelsInfo> _infos = new List<ModelsInfo>();
+    public List<ModelsInfo> Infos => _infos;
+}
+public class ModelsInfo
+{
+    public string Name { get; set; }
+    public string Space { get; set; }
+    public List<string> Propertys { get; set; }
+
+}
+#>

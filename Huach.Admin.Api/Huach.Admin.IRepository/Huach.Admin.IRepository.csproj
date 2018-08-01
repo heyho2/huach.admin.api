@@ -40,6 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basic\ISysLogsRepository.cs" />
+    <Compile Include="Basic\ISysMenuRepository.cs" />
+    <Compile Include="Basic\ISysMenuRoleRepository.cs" />
+    <Compile Include="Basic\ISysRegionRepository.cs" />
+    <Compile Include="Basic\ISysRoleRepository.cs" />
+    <Compile Include="Basic\ISysUserRoleRepository.cs" />
+    <Compile Include="Business\IAdvertisingImageRepository.cs" />
+    <Compile Include="Business\ICompanyRepository.cs" />
+    <Compile Include="Business\INewsRepository.cs" />
+    <Compile Include="Business\IProductAttrRepository.cs" />
+    <Compile Include="Business\IProductRepository.cs" />
+    <Compile Include="Business\IProductTypeRepository.cs" />
     <Compile Include="IRepositoryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Basic\ISysDictionaryRepository.cs" />
@@ -56,5 +68,6 @@
       <Name>Huach.Framework</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
