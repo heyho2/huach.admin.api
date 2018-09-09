@@ -34,9 +34,6 @@
     <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\Huach.Admin.Api\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
-      <HintPath>..\Huach.Admin.Api\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
     <Reference Include="JWT, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\Huach.Admin.Api\packages\JWT.4.0.0\lib\net46\JWT.dll</HintPath>
     </Reference>
@@ -44,7 +41,7 @@
       <HintPath>..\Huach.Admin.Api\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\Huach.Admin.Api\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NPOI, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\Huach.Admin.Api\packages\NPOI.2.3.0\lib\net40\NPOI.dll</HintPath>
@@ -58,7 +55,11 @@
     <Reference Include="NPOI.OpenXmlFormats, Version=2.3.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
       <HintPath>..\Huach.Admin.Api\packages\NPOI.2.3.0\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
+    <Reference Include="Snowflake.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Snowflake.Net.4.6.1\lib\Snowflake.Net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -76,7 +77,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extend\EFSelector.cs" />
     <Compile Include="Extend\EnumExtension.cs" />
+    <Compile Include="Extend\OtherExtension.cs" />
+    <Compile Include="Helper\HttpUtil.cs" />
+    <Compile Include="Helper\JsonHelper.cs" />
+    <Compile Include="Helper\NpgsqlArray.cs" />
+    <Compile Include="Helper\RedisSession.cs" />
+    <Compile Include="Helper\Util.cs" />
+    <Compile Include="Helper\ValidateCode .cs" />
     <Compile Include="Models\ActionResult.cs" />
     <Compile Include="Auth\BaseAuthFilterAttribute.cs" />
     <Compile Include="Auth\BaseJwtAuthFilterAttribute.cs" />
@@ -94,20 +103,18 @@
     <Compile Include="Extend\ExpressionVisitor\OperationsVisitor.cs" />
     <Compile Include="Helper\CookieHelper.cs" />
     <Compile Include="Helper\MakeThumbnail.cs" />
-    <Compile Include="Helper\VerifyCodeHelper.cs" />
     <Compile Include="IOC\ObjectContainer.cs" />
     <Compile Include="IService.cs" />
     <Compile Include="Jwt\JwtDecode.cs" />
     <Compile Include="Jwt\JwtHelper.cs" />
     <Compile Include="Log\Logger.cs" />
     <Compile Include="Filters\BaseExceptionFilterAttribute.cs" />
+    <Compile Include="NumberGenerator\IDGenerate.cs" />
+    <Compile Include="NumberGenerator\INumber.cs" />
+    <Compile Include="NumberGenerator\Number.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceProvider.cs" />
     <Compile Include="ServiceProviderExtesions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

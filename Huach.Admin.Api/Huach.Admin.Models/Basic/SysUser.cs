@@ -28,7 +28,7 @@ namespace Huach.Admin.Models.Basic
         /// 真实姓名
         /// </summary>
         [StringLength(20), Required]
-        public string RealName { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// Email
         /// </summary>
@@ -66,5 +66,10 @@ namespace Huach.Admin.Models.Basic
         /// 父节点
         /// </summary>
         public int ParentId { get; set; }
+        /// <summary>
+        /// 是否管理员
+        /// </summary>
+        public bool IsManager { get; set; }
+
     }
 }

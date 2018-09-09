@@ -21,7 +21,7 @@ namespace Huach.Admin.Service
         /// <summary>
         /// 用户信息
         /// </summary>
-        UserInfo CurrentUser => HttpContext.Current.GetOwinContext().Get<UserInfo>(nameof(UserInfo));
+        internal UserInfo CurrentUser => HttpContext.Current.GetOwinContext().Get<UserInfo>(nameof(UserInfo)) ?? new UserInfo();
         /// <summary>
         /// 实现对数据库的查询  --简单查询
         /// </summary>

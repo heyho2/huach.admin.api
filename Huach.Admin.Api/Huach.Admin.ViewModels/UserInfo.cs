@@ -26,6 +26,19 @@ namespace Huach.Admin.ViewModels
         /// <summary>
         /// 真实姓名
         /// </summary>
-        public string RealName { get; set; }
+        public string Name { get; set; }
+        /// <summary>
+        /// 角色
+        /// </summary>
+        public int[] Roles { get; set; }
+        /// <summary>
+        /// 头像
+        /// </summary>
+        public string Avatar { get; set; }
+        /// <summary>
+        /// 是否管理员
+        /// </summary>
+        public bool IsManager { get; set; }
+        
     }
 }

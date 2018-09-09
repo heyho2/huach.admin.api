@@ -1,0 +1,41 @@
+2018-08-05 16:49:56,628 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 18:25:56,336 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 18:29:21,566 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 18:31:04,378 [31] ERROR Huach.Admin.Api.Filters.CustomExceptionFilterAttribute -  在执行 controller【Token】 的 action【login】时产生异常,异常信息：已取消该操作。
+System.OperationCanceledException: 已取消该操作。
+   在 System.Threading.CancellationToken.ThrowOperationCanceledException()
+   在 System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__6.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Filters.ActionFilterAttribute.<ExecuteActionFilterAsyncCore>d__5.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__5.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__3.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__6.MoveNext()
+2018-08-05 18:48:59,943 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 18:51:22,408 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 18:51:34,369 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 19:02:43,186 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 19:08:32,666 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 19:47:57,801 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 22:00:12,164 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 22:03:05,967 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 22:17:05,311 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 22:39:48,614 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 22:42:37,809 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 22:45:06,842 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 22:46:48,124 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 22:49:30,954 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 23:05:50,974 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 23:13:48,278 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 23:19:34,162 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块
+2018-08-05 23:22:57,736 [1] INFO  Huach.Framework.Log.Logger - 系统初始化Logger模块

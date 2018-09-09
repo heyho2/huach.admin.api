@@ -42,5 +42,6 @@ namespace Huach.Framework.Extend
                                                                Expression.Quote(keySelectorLambda)));
             return query;
         }
+       
     }
 }

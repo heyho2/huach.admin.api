@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Web;
+using Huach.Framework.Extend;
 
 namespace Huach.Admin.Api.Filters
 {
@@ -26,31 +27,36 @@ namespace Huach.Admin.Api.Filters
         }
         protected override string GetUserIdentification(IDictionary<string, object> payload)
         {
-            if (payload?.Count > 0 && payload.ContainsKey("UserIdentification"))
+            if (payload?.Count > 0 && payload.ContainsKey("userName"))
             {
-                return payload["UserIdentification"]?.ToString();
+                return payload["userName"]?.ToString();
             }
             return null;
         }
-        protected override bool IsAuthenticated(string userIdentification, IDictionary<string, object> jwtPayload)
+        protected override bool IsAuthenticated(string userName, IDictionary<string, object> jwtPayload)
         {
-            //SystemUserSerivce systemUserSerivce = ServiceProvider.Current.GetService<SystemUserSerivce>(); 
-
-            //SystemUserInfo user = systemUserSerivce.GetAll().Where(a => a.UserName == userIdentification).Select(a => new SystemUserInfo
-            //{
-            //    Id = a.Id,
-            //    UserName = a.UserName,
-            //    FullName = a.FullName,
-            //    Phone = a.Phone,
-            //}).FirstOrDefault(); 
-            var user = new UserInfo
+            if (HttpContext.Current.GetOwinContext().Get<UserInfo>(nameof(UserInfo)) == null)
             {
-                UserName = userIdentification,
-            };
+                try
+                {
+                    var user = new UserInfo
+                    {
+                        UserName = userName,
+                        Name = (string)jwtPayload.GetValue("Name"),
+                        Mobile = (string)jwtPayload.GetValue("Mobile"),
+                        IsManager = (bool)(jwtPayload.GetValue("IsManager") ?? false),
+                        Roles = jwtPayload.GetValue("Roles") == null ? new int[0] : ((string)jwtPayload.GetValue("Roles")).Split(',').Select(a => Convert.ToInt32(a)).ToArray(),
+                    };
+                    HttpContext.Current.GetOwinContext().Set(nameof(UserInfo), user);
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
             //if (user == null)
             //    return false;
             //TODO 从缓存中获取用户信息
-            HttpContext.Current.GetOwinContext().Set(nameof(UserInfo), user);
             return true;
         }
     }

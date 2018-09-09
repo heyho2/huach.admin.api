@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Base\BaseResponse.cs" />
     <Compile Include="Base\BaseRequest.cs" />
+    <Compile Include="Basic\LoginRequest.cs" />
     <Compile Include="Basic\SysDictionaryRequest.cs" />
     <Compile Include="Basic\SysDictionaryResponse.cs" />
     <Compile Include="Basic\SysDictionaryTypeRequest.cs" />

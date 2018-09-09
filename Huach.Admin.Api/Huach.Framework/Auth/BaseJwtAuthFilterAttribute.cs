@@ -16,7 +16,7 @@ namespace Huach.Framework.Models
         protected abstract string GetUserIdentification(IDictionary<string, object> jwtPayload);
         protected override string GetUserIdentification(HttpActionContext actionContext)
         {
-            object UserIdentification = actionContext.ActionArguments["UserIdentification"];
+            object UserIdentification = actionContext.ActionArguments["userName"];
             if (UserIdentification == null)
             {
                 return null;
@@ -38,11 +38,11 @@ namespace Huach.Framework.Models
                 msg = jwtDecodeInfo.Msg;
                 if (jwtDecodeInfo.IsSucceed)
                 {
-                    string userIdentification = this.GetUserIdentification(jwtDecodeInfo.Payload);
-                    if (this.IsAuthenticated(userIdentification, jwtDecodeInfo.Payload))
+                    string userName = this.GetUserIdentification(jwtDecodeInfo.Payload);
+                    if (this.IsAuthenticated(userName, jwtDecodeInfo.Payload))
                     {
                         flag = true;
-                        actionContext.ActionArguments["UserIdentification"] = userIdentification;
+                        actionContext.ActionArguments["userName"] = userName;
                         base.OnAuthorization(actionContext);
                     }
                 }

@@ -24,13 +24,8 @@ namespace Huach.Admin.Api.Controllers
         {
             _service = service;
         }
-
-        /// <summary>
-        /// 删除
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        [ResponseType(typeof(ActionResult<int>)), HttpGet, AllowAnonymous]
+        
+        [ResponseType(typeof(ActionResult<int>)), HttpGet]
         public virtual IHttpActionResult Delete(int id)
         {
             _service.Delete(a => a.Id == id);

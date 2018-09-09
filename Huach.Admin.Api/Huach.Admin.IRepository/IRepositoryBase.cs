@@ -61,6 +61,12 @@ namespace Huach.Admin.IRepository
         /// <returns></returns>
         IQueryable<T> Where(Expression<Func<T, bool>> whereLambda);
         /// <summary>
+        /// 获取所有
+        /// </summary>
+        /// <param name="whereLambda"></param>
+        /// <returns></returns>
+        IQueryable<T> All();
+        /// <summary>
         /// 实现对数据库的查询  --简单单行查询
         /// </summary> 
         /// <param name="whereLambda"></param>

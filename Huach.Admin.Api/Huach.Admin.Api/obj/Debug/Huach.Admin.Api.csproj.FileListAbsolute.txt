@@ -239,3 +239,6 @@ E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Api\obj\Debug\Huach.Admin
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Api\obj\Debug\Huach.Admin.Api.dll
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Api\obj\Debug\Huach.Admin.Api.pdb
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Api\bin\Huach.Admin.Service.dll.config
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Api\bin\Microsoft.Owin.Cors.dll
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Api\bin\System.Web.Cors.dll
+E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Api\bin\Microsoft.Owin.Cors.xml

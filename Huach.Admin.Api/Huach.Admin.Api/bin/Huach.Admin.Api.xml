@@ -14,13 +14,6 @@
             用户信息
             </summary>
         </member>
-        <member name="M:Huach.Admin.Api.Controllers.BaseApiController`1.Delete(System.Int32)">
-            <summary>
-            删除
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
         <member name="T:Huach.Admin.Api.Controllers.Basic.SysDictionaryController">
             <summary>
             SysDictionaryController 
@@ -731,12 +724,22 @@
             用户登录 Token
             </summary>
         </member>
-        <member name="M:Huach.Admin.Api.Controllers.TokenController.Login(System.String,System.String)">
+        <member name="M:Huach.Admin.Api.Controllers.TokenController.Login(Huach.Admin.ViewModels.Basic.LoginRequest)">
             <summary>
             获取token
             </summary>
-            <param name="userIdentification">用户名</param>
-            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.TokenController.GetUser">
+            <summary>
+            获取登陆后的用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Huach.Admin.Api.Controllers.TokenController.Logout">
+            <summary>
+            退出登陆
+            </summary>
             <returns></returns>
         </member>
         <member name="P:Huach.Admin.Api.Filters.JwtAuthFilterAttribute.Secret">

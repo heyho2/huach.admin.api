@@ -19,7 +19,7 @@ namespace Huach.Admin.Repository
 
         //获取的是当前线程内部的上下文实例，而且保证了线程内上下文唯一
         private DbContext db = EFContextFactory.GetCurrentDbContext;
-        
+
         public IQueryable<TResult> LoadPaging<TResult>(Expression<Func<T, bool>> whereLambda, Expression<Func<T, TResult>> selector, out int total, int pageIndex, int pageSize, string order, string sort)
         {
             var temp = db.Set<T>().Where<T>(whereLambda);
@@ -103,7 +103,12 @@ namespace Huach.Admin.Repository
 
         public IQueryable<T> Where(Expression<Func<T, bool>> whereLambda)
         {
-            return db.Set<T>().AsNoTracking().Where<T>(whereLambda).AsQueryable();
+            return db.Set<T>().AsNoTracking().Where<T>(whereLambda);
+        }
+
+        public IQueryable<T> All()
+        {
+            return db.Set<T>().AsNoTracking();
         }
 
         public T FirstOrDefault(Expression<Func<T, bool>> whereLambda)

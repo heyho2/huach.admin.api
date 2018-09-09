@@ -116,3 +116,19 @@ var SwaggerTranslator = (function () {
 })();
 //执行转换
 SwaggerTranslator.Translator();
+
+
+
+if (store.getters.roles.length === 0) {
+    getInfo().then(res => { // 拉取用户信息
+        next();
+    }).catch((err) => {
+        store.dispatch('FedLogOut').then(() => {
+            Message.error(err || 'Verification failed, please login again')
+            next({ path: '/' })
+        });
+    })
+} else {
+    next()
+}
+    

@@ -64,6 +64,21 @@
             排序字段
             </summary>
         </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.LoginRequest">
+            <summary>
+            登陆
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.LoginRequest.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.LoginRequest.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
         <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryDeleteRequest">
             <summary>
             删除请求参数
@@ -1584,9 +1599,24 @@
             手机号
             </summary>
         </member>
-        <member name="P:Huach.Admin.ViewModels.UserInfo.RealName">
+        <member name="P:Huach.Admin.ViewModels.UserInfo.Name">
             <summary>
             真实姓名
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.UserInfo.Roles">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.UserInfo.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.UserInfo.IsManager">
+            <summary>
+            是否管理员
             </summary>
         </member>
     </members>

@@ -13,23 +13,23 @@ namespace Huach.Framework
         {
             get
             {
-                if (!ServiceProvider.IsServiceProviderSet)
+                if (!IsServiceProviderSet)
                 {
                     throw new InvalidOperationException("必须先调用SetServiceProvider赋值");
                 }
-                return ServiceProvider._serviceProvider;
+                return _serviceProvider;
             }
         }
         public static bool IsServiceProviderSet
         {
             get
             {
-                return ServiceProvider._serviceProvider != null;
+                return _serviceProvider != null;
             }
         }
         public static void SetServiceProvider(IServiceProvider newProvider)
         {
-            ServiceProvider._serviceProvider = newProvider;
+            _serviceProvider = newProvider;
         }
     }
 }

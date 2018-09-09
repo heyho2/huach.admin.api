@@ -1,11 +1,7 @@
 ﻿using JWT;
 using JWT.Algorithms;
 using JWT.Serializers;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Huach.Framework.Jwt
 {
@@ -48,7 +44,8 @@ namespace Huach.Framework.Jwt
         }
         public static JwtDecode<Dictionary<string, object>> Decode(string token, string secret)
         {
-            return JwtHelper.Decode<Dictionary<string, object>>(token, secret);
+            return Decode<Dictionary<string, object>>(token, secret);
         }
+
     }
 }

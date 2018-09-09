@@ -3,6 +3,7 @@ using Huach.Admin.Api.Config;
 using Huach.Admin.Api.Filters;
 using Huach.Framework;
 using Microsoft.Owin;
+using Microsoft.Owin.Cors;
 using Owin;
 using Swashbuckle.Application;
 using System.Web.Http;
@@ -44,7 +45,10 @@ namespace Huach.Admin.Api
             app.UseAutofacMiddleware(container);// 先注册autofac组件，需要依赖注入功能的组件在此后注册
             app.UseAutofacWebApi(config);//注册AutofacWebApi组件后再注册WebApi组件
 
+            app.UseCors(CorsOptions.AllowAll);
+             
             app.UseWebApi(config);
+            //跨域
 
             var webApiResolver = new AutofacWebApiDependencyResolver(container);
             ServiceProvider.SetServiceProvider(new DependencyResolverServiceProvider(webApiResolver));

@@ -16,7 +16,6 @@ namespace Huach.Admin.Api.Filters
     [AttributeUsage(AttributeTargets.Parameter, Inherited = true)]
     public class ModelValidationFilterAttribute : ActionFilterAttribute
     {
-
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
             //反射给参数特性验证
@@ -25,10 +24,10 @@ namespace Huach.Admin.Api.Filters
             {
                 if (prop.IsDefined(typeof(ValidationAttribute), true))
                 {
-                    object[] attrs = prop.GetCustomAttributes(typeof(ValidationAttribute), true);
+                    var attrs = prop.GetCustomAttributes(typeof(ValidationAttribute), true);
                     foreach (var attr in attrs)
                     {
-                        ValidationAttribute attribute = attr as ValidationAttribute;
+                        var attribute = attr as ValidationAttribute;
                         var msg = attribute.ErrorMessage;
                         try
                         {
@@ -42,9 +41,9 @@ namespace Huach.Admin.Api.Filters
                     }
                 }
             }
-            if (actionContext.ModelState.IsValid == false)
+            if (!actionContext.ModelState.IsValid)
             {
-                var msg = string.Join(",", actionContext.ModelState.Select(a => a.Value.Errors[0].ErrorMessage).ToArray());
+                var msg = string.Join(",", actionContext.ModelState.Select(a => string.IsNullOrWhiteSpace(a.Value.Errors.FirstOrDefault()?.ErrorMessage) ? a.Value.Errors.FirstOrDefault()?.Exception.Message : a.Value.Errors.FirstOrDefault()?.ErrorMessage).Where(a => !string.IsNullOrWhiteSpace(a)).ToArray());
                 actionContext.Response = actionContext.Request.CreateResponse(ActionResult.Fail(msg));
                 return;
             }
