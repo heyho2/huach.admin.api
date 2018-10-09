@@ -5,7 +5,7 @@ namespace Huach.Admin.Repository.Basic
     /// <summary>
     /// SysLogsRepository 
     /// </summary>
-    public class SysLogsRepository: RepositoryBase<SysLogs>,ISysLogsRepository
+    public class SysLogsRepository: BaseRepository<SysLogs>,ISysLogsRepository
     {    
 		
     }

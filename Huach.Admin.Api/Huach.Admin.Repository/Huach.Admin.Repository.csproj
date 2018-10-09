@@ -63,7 +63,7 @@
     <Compile Include="HuachContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepositoryBase.cs" />
+    <Compile Include="BaseRepository.cs" />
     <Compile Include="Basic\SysDictionaryRepository.cs" />
     <Compile Include="Basic\SysDictionaryTypeRepository.cs" />
     <Compile Include="Basic\SysUserRepository.cs" />

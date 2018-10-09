@@ -6,7 +6,7 @@ namespace Huach.Admin.Service.Basic
     /// <summary>
     /// SysRegionService 
     /// </summary>
-    public class SysRegionService: ServiceBase<SysRegion>  
+    public class SysRegionService: BaseService<SysRegion>  
     {    
 		private readonly ISysRegionRepository _sysRegionRepository;
 		public SysRegionService(ISysRegionRepository sysRegionRepository)

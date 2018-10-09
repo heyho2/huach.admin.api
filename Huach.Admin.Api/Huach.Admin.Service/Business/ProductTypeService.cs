@@ -6,7 +6,7 @@ namespace Huach.Admin.Service.Basic
     /// <summary>
     /// ProductTypeService 
     /// </summary>
-    public class ProductTypeService: ServiceBase<ProductType>  
+    public class ProductTypeService: BaseService<ProductType>  
     {    
 		private readonly IProductTypeRepository _productTypeRepository;
 		public ProductTypeService(IProductTypeRepository productTypeRepository)

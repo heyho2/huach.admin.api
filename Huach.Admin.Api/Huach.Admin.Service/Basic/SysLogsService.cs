@@ -6,7 +6,7 @@ namespace Huach.Admin.Service.Basic
     /// <summary>
     /// SysLogsService 
     /// </summary>
-    public class SysLogsService: ServiceBase<SysLogs>  
+    public class SysLogsService: BaseService<SysLogs>  
     {    
 		private readonly ISysLogsRepository _sysLogsRepository;
 		public SysLogsService(ISysLogsRepository sysLogsRepository)

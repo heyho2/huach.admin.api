@@ -39,6 +39,10 @@ namespace Huach.Admin.ViewModels
         /// 是否管理员
         /// </summary>
         public bool IsManager { get; set; }
-        
+        /// <summary>
+        /// 过期时间
+        /// </summary>
+        public DateTime Expired { get; set; }
+
     }
 }

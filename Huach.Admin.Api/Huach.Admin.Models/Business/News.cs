@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Huach.Admin.Models.Basic
 {
     [Table("t_news")]
-    public partial class News : ModelBase
+    public partial class News : BaseModel
     {
         /// <summary>
         /// 标题

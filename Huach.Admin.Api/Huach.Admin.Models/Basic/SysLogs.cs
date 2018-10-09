@@ -6,7 +6,7 @@ using System.ComponentModel;
 namespace Huach.Admin.Models.Basic
 {
     [Table("sys_logs")]
-    public partial class SysLogs : ModelBase
+    public partial class SysLogs : BaseModel
     {
         /// <summary>
         /// 类型

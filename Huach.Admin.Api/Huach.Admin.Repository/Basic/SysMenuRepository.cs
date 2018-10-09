@@ -5,7 +5,7 @@ namespace Huach.Admin.Repository.Basic
     /// <summary>
     /// SysMenuRepository 
     /// </summary>
-    public class SysMenuRepository: RepositoryBase<SysMenu>,ISysMenuRepository
+    public class SysMenuRepository: BaseRepository<SysMenu>,ISysMenuRepository
     {    
 		
     }

@@ -3,6 +3,7 @@ using Huach.Admin.Models;
 using Huach.Framework.Extend;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
@@ -14,7 +15,7 @@ namespace Huach.Admin.Repository
     /// 实现对数据库的操作(增删改查)的基类
     /// </summary>
     /// <typeparam name="T">定义泛型，约束其是一个类</typeparam>
-    public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : ModelBase
+    public abstract class BaseRepository<T> : IBaseRepository<T> where T : BaseModel
     {
 
         //获取的是当前线程内部的上下文实例，而且保证了线程内上下文唯一
@@ -42,13 +43,47 @@ namespace Huach.Admin.Repository
             return db.SaveChanges();
         }
 
-        public int Update(T entity, params string[] proNames)
+
+        public int Update(Expression<Func<T>> entityExpression, Expression<Func<T, bool>> whereLambda)
         {
-            var entry = db.Entry<T>(entity);
-            entry.State = EntityState.Unchanged;
-            foreach (var item in proNames)
+            MemberInitExpression memberInitExpression;
+            if ((memberInitExpression = (entityExpression.Body as MemberInitExpression)) == null)
             {
-                entry.Property(item).IsModified = true;
+                return 0;
+            }
+            ReadOnlyCollection<MemberBinding> bindings = memberInitExpression.Bindings;
+            if (bindings != null && bindings.Count > 0)
+            {
+                T newEntity = entityExpression.Compile()();
+
+
+
+                var dbSet = db.Set<T>();
+                List<T> list = new List<T>();
+                //if (whereLambda == null)
+                //{
+                //    list.Add(dbSet.Find(keys.Values.ToArray()));
+                //}
+                //else
+                //{
+                list.AddRange(dbSet.Where(whereLambda));
+                //}
+                if (list.Count > 0)
+                {
+                    PropertyInfo[] properties = typeof(T).GetProperties();
+                    foreach (T item in list)
+                    {
+                        if (item != null)
+                        {
+                            dbSet.Attach(item);
+                            foreach (var property in properties)
+                            {
+                                object value = property.GetValue(newEntity);
+                                property.SetValue(item, value);
+                            }
+                        }
+                    }
+                }
             }
             return db.SaveChanges();
         }
@@ -95,7 +130,7 @@ namespace Huach.Admin.Repository
             ListDel.ForEach(a =>
             {
                 db.Set<T>().Attach(a);
-                db.Entry<T>(a).State = EntityState.Deleted;
+                db.Entry(a).State = EntityState.Deleted;
             });
             //EF5.0的写法
             return db.SaveChanges();
@@ -115,7 +150,10 @@ namespace Huach.Admin.Repository
         {
             return db.Set<T>().AsNoTracking().FirstOrDefault<T>(whereLambda);
         }
-
+        public TResult FirstOrDefault<TResult>(Expression<Func<T, TResult>> selector, Expression<Func<T, bool>> whereLambda)
+        {
+            return db.Set<T>().Where(whereLambda).Select(selector).FirstOrDefault();
+        }
         public T Find(params object[] keyValues)
         {
             return db.Set<T>().Find(keyValues);

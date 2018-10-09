@@ -22,7 +22,7 @@ namespace Huach.Admin.Api
             WebApiConfig.Register(config);
 
             // Web API 认证授权，采用JWT标准。
-            config.Filters.Add(new JwtAuthFilterAttribute());
+            config.Filters.Add(new TokenAuthFilterAttribute());
 
             //model 验证
             config.Filters.Add(new ModelValidationFilterAttribute());
@@ -46,14 +46,14 @@ namespace Huach.Admin.Api
             app.UseAutofacWebApi(config);//注册AutofacWebApi组件后再注册WebApi组件
 
             app.UseCors(CorsOptions.AllowAll);
-             
+
             app.UseWebApi(config);
             //跨域
 
             var webApiResolver = new AutofacWebApiDependencyResolver(container);
             ServiceProvider.SetServiceProvider(new DependencyResolverServiceProvider(webApiResolver));
 
-           
+
 
         }
     }

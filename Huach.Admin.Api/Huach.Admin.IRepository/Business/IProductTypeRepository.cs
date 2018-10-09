@@ -5,7 +5,7 @@ namespace Huach.Admin.IRepository.Basic
     /// <summary>
     /// IProductTypeRepository 
     /// </summary>
-    public interface IProductTypeRepository: IRepositoryBase<ProductType>  
+    public interface IProductTypeRepository: IBaseRepository<ProductType>  
     {    
 		
     }

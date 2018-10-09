@@ -5,13 +5,14 @@ using System.Collections.Generic;
 
 namespace Huach.Framework.Jwt
 {
-    internal class JwtHelper
+    public class JwtHelper
     {
         public static string Encode(object payload, string secret)
         {
             IJwtAlgorithm algorithm = new HMACSHA256Algorithm();
             IJsonSerializer serializer = new JsonNetSerializer();
             IBase64UrlEncoder urlEncoder = new JwtBase64UrlEncoder();
+
             return new JwtEncoder(algorithm, serializer, urlEncoder).Encode(payload, secret);
         }
         public static JwtDecode<T> Decode<T>(string token, string secret)

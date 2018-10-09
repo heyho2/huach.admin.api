@@ -6,7 +6,7 @@ namespace Huach.Admin.Service.Basic
     /// <summary>
     /// NewsService 
     /// </summary>
-    public class NewsService: ServiceBase<News>  
+    public class NewsService: BaseService<News>  
     {    
 		private readonly INewsRepository _newsRepository;
 		public NewsService(INewsRepository newsRepository)

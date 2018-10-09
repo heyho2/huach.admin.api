@@ -5,16 +5,17 @@ using Huach.Admin.ViewModels;
 using Huach.Admin.ViewModels.Base;
 using Huach.Framework;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
 
 namespace Huach.Admin.Service
 {
-    public class ServiceBase<T> : IService where T : ModelBase
+    public class BaseService<T> : IService where T : BaseModel
     {
-        private readonly IRepositoryBase<T> _repository = null;
-        public ServiceBase(IRepositoryBase<T> repository)
+        private readonly IBaseRepository<T> _repository = null;
+        public BaseService(IBaseRepository<T> repository)
         {
             _repository = repository;
         }
@@ -27,18 +28,37 @@ namespace Huach.Admin.Service
         /// </summary>
         /// <param name="whereLambda"></param>
         /// <returns></returns>
-        public IQueryable<T> Where(Expression<Func<T, bool>> whereLambda)
+        private IQueryable<T> Where(Expression<Func<T, bool>> whereLambda)
         {
             return _repository.Where(whereLambda);
         }
+        public List<T> GetList(Expression<Func<T, bool>> whereLambda)
+        {
+            return _repository.Where(whereLambda).ToList();
+        }
+        public List<TResult> GetList<TResult>(Expression<Func<T, TResult>> selector, Expression<Func<T, bool>> whereLambda)
+        {
+            return _repository.Where(whereLambda).Select(selector).ToList();
+        }
         /// <summary>
-        /// 实现对数据库的查询  --简单单行查询
+        /// 单行查询
         /// </summary> 
         /// <param name="whereLambda"></param>
         /// <returns></returns>
         public T FirstOrDefault(Expression<Func<T, bool>> whereLambda)
         {
             return _repository.FirstOrDefault(whereLambda);
+        }
+        /// <summary>
+        /// 单行查询
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="selector"></param>
+        /// <param name="whereLambda"></param>
+        /// <returns></returns>
+        public TResult FirstOrDefault<TResult>(Expression<Func<T, TResult>> selector, Expression<Func<T, bool>> whereLambda)
+        {
+            return _repository.FirstOrDefault<TResult>(selector, whereLambda);
         }
         /// <summary>
         /// 实现对数据的分页查询
@@ -89,7 +109,7 @@ namespace Huach.Admin.Service
             entity.CreateBy = CurrentUser.Id;
             entity.CreateDate = DateTime.Now;
             entity.ModifyBy = 0;
-            entity.Disable = (short)ModelBase.DisableEnum.Normal;
+            entity.Disable = (short)BaseModel.DisableEnum.Normal;
             return _repository.Add(entity);
         }
         /// <summary>
@@ -102,8 +122,12 @@ namespace Huach.Admin.Service
         {
             entity.ModifyBy = CurrentUser.Id;
             entity.ModifyDate = DateTime.Now;
-            entity.Disable = (short)ModelBase.DisableEnum.Normal;
+            entity.Disable = (short)BaseModel.DisableEnum.Normal;
             return _repository.Update(entity);
+        }
+        public int Update(Expression<Func<T>> entityExpression, Expression<Func<T, bool>> whereLambda)
+        {
+            return _repository.Update(entityExpression, whereLambda);
         }
         /// <summary>
         /// 禁用
@@ -116,7 +140,7 @@ namespace Huach.Admin.Service
             var entity = _repository.Find(id);
             entity.ModifyBy = CurrentUser.Id;
             entity.ModifyDate = DateTime.Now;
-            entity.Disable = (short)ModelBase.DisableEnum.Disable;
+            entity.Disable = (short)BaseModel.DisableEnum.Disable;
             return _repository.Update(entity);
         }
     }

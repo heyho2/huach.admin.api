@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Huach.Admin.Models.Basic
 {
     [Table("sys_dictionary_type")]
-    public partial class SysDictionaryType : ModelBase
+    public partial class SysDictionaryType : BaseModel
     {
         /// <summary>
         /// 类型编码

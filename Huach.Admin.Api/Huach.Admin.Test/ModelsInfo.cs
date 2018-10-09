@@ -13,7 +13,7 @@ namespace Huach.Admin.Test
             //var classes = Assembly.Load(@namespace).GetTypes();
             foreach (var item in classes)
             {
-                if (item.BaseType.Name== "ModelBase" && item.Name != nameof(ModelBase))
+                if (item.BaseType.Name== "ModelBase" && item.Name != nameof(BaseModel))
                 {
                     var spaceJies = item.FullName.Split('.');
                     string space;

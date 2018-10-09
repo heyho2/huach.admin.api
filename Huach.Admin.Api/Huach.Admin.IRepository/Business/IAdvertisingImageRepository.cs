@@ -5,7 +5,7 @@ namespace Huach.Admin.IRepository.Business
     /// <summary>
     /// IAdvertisingImageRepository 
     /// </summary>
-    public interface IAdvertisingImageRepository: IRepositoryBase<AdvertisingImage>  
+    public interface IAdvertisingImageRepository: IBaseRepository<AdvertisingImage>  
     {    
 		
     }

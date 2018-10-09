@@ -5,7 +5,7 @@ namespace Huach.Admin.IRepository.Basic
     /// <summary>
     /// INewsRepository 
     /// </summary>
-    public interface INewsRepository: IRepositoryBase<News>  
+    public interface INewsRepository: IBaseRepository<News>  
     {    
 		
     }

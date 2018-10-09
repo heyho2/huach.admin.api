@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Huach.Admin.Models.Basic
 {
     [Table("t_product_type")]
-    public partial class ProductType : ModelBase
+    public partial class ProductType : BaseModel
     {
         /// <summary>
         /// 属性名称

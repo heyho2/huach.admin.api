@@ -20,22 +20,18 @@ namespace Huach.Framework.Models
         {
             return actionContext.Request.Headers.GetValues(TokenKeyName).FirstOrDefault();
         }
-        protected override string GetUserIdentification(HttpActionContext actionContext)
-        {
-            return this.GetToken(actionContext);
-        }
         public override void OnAuthorization(HttpActionContext actionContext)
         {
-            if (this.IsAllowAnonymous(actionContext))
+            if (IsAllowAnonymous(actionContext))
             {
                 return;
             }
-            if (this.IsAuthenticated(this.GetToken(actionContext)))
+            if (IsAuthenticated(GetToken(actionContext)))
             {
                 base.OnAuthorization(actionContext);
                 return;
             }
-            this.HandleUnauthenticatedRequest(actionContext, null);
+            HandleUnauthenticatedRequest(actionContext, null);
         }
         protected abstract bool IsAuthenticated(string token);
     }

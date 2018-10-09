@@ -66,7 +66,7 @@ namespace Huach.Framework.Helper
             string paramData = ObjectToParams(parameter);
             if (TryPost(url, out string strResult, paramData, hearders))
             {
-                return Tool.TryJsonDeserialize(strResult, out result);
+                return JsonHelper.TryDeserialize(strResult, out result);
             };
             result = default(ResultT);
             return false;
@@ -76,7 +76,7 @@ namespace Huach.Framework.Helper
             string paramData = DictionaryToParams(parameter);
             if (TryPost(url, out string strResult, paramData, hearders))
             {
-                return Tool.TryJsonDeserialize(strResult, out result);
+                return JsonHelper.TryDeserialize(strResult, out result);
             };
             result = default(ResultT);
             return false;

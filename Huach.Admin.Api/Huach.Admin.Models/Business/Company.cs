@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Huach.Admin.Models.Business
 {
     [Table("t_company")]
-    public partial class Company:ModelBase
+    public partial class Company:BaseModel
     {
         /// <summary>
         /// qq

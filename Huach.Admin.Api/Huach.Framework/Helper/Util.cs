@@ -60,6 +60,5 @@ namespace Huach.Framework.Helper
             else
                 return type.Name;
         }
-
     }
 }

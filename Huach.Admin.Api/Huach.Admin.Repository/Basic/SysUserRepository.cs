@@ -5,7 +5,7 @@ namespace Huach.Admin.Repository.Basic
     /// <summary>
     /// SysUserRepository 
     /// </summary>
-    public class SysUserRepository: RepositoryBase<SysUser>,ISysUserRepository
+    public class SysUserRepository: BaseRepository<SysUser>,ISysUserRepository
     {    
 		
     }

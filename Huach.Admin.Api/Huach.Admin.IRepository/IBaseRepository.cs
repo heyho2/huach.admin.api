@@ -11,7 +11,7 @@ namespace Huach.Admin.IRepository
     /// 实现对数据库的操作(增删改查)的基类
     /// </summary>
     /// <typeparam name="T">定义泛型，约束其是一个类</typeparam>
-    public interface IRepositoryBase<T> : IService where T : ModelBase
+    public interface IBaseRepository<T> : IService where T : BaseModel
     {
         /// <summary>
         /// 实现对数据库的添加功能,添加实现EF框架的引用
@@ -27,20 +27,12 @@ namespace Huach.Admin.IRepository
         /// <returns></returns>
         int Update(T entity);
         /// <summary>
-        /// 实现对数据库的修改功能
+        /// 按条件
         /// </summary>
-        /// <param name="entity"></param>
-        /// <param name="proNames">要修改的实体属性</param>
+        /// <param name="entityExpression"></param>
+        /// <param name="whereLambda"></param>
         /// <returns></returns>
-        int Update(T entity, params string[] proNames);
-        /// <summary>
-        /// 批量修改
-        /// </summary>
-        /// <param name="entity">修改内容</param>
-        /// <param name="whereLambda">查询条件</param>
-        /// <param name="proNames">要修改的实体属性</param>
-        /// <returns></returns>
-        int Update(T entity, Expression<Func<T, bool>> whereLambda, params string[] proNames);
+        int Update(Expression<Func<T>> entityExpression, Expression<Func<T, bool>> whereLambda);
 
         /// <summary>
         /// 实现对数据库的删除功能
@@ -90,5 +82,13 @@ namespace Huach.Admin.IRepository
         /// <param name="sort">排序字段</param>
         /// <returns></returns>
         IQueryable<TResult> LoadPaging<TResult>(Expression<Func<T, bool>> whereLambda, Expression<Func<T, TResult>> selector, out int total, int pageIndex, int pageSize, string order, string sort);
+        /// <summary>
+        /// 单行查询
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="selector"></param>
+        /// <param name="whereLambda"></param>
+        /// <returns></returns>
+        TResult FirstOrDefault<TResult>(Expression<Func<T, TResult>> selector, Expression<Func<T, bool>> whereLambda);
     }
 }

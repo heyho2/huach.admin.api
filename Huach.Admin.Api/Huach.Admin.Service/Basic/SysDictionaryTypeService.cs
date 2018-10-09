@@ -6,7 +6,7 @@ namespace Huach.Admin.Service.Basic
     /// <summary>
     /// SysDictionaryTypeService 
     /// </summary>
-    public class SysDictionaryTypeService: ServiceBase<SysDictionaryType>  
+    public class SysDictionaryTypeService: BaseService<SysDictionaryType>  
     {    
 		private readonly ISysDictionaryTypeRepository _sysDictionaryTypeRepository;
 		public SysDictionaryTypeService(ISysDictionaryTypeRepository sysDictionaryTypeRepository)

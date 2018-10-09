@@ -6,7 +6,7 @@ namespace Huach.Admin.Service.Basic
     /// <summary>
     /// SysMenuService 
     /// </summary>
-    public class SysMenuService: ServiceBase<SysMenu>  
+    public class SysMenuService: BaseService<SysMenu>  
     {    
 		private readonly ISysMenuRepository _sysMenuRepository;
 		public SysMenuService(ISysMenuRepository sysMenuRepository)

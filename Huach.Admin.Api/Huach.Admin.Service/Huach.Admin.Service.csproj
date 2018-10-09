@@ -64,9 +64,10 @@
     <Compile Include="Business\ProductService.cs" />
     <Compile Include="Business\ProductTypeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceBase.cs" />
+    <Compile Include="BaseService.cs" />
     <Compile Include="Basic\SysDictionaryService.cs" />
     <Compile Include="Basic\SysUserService.cs" />
+    <Compile Include="RedisKey.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

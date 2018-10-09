@@ -1,6 +1,7 @@
 using Huach.Admin.IRepository.Basic;
 using Huach.Admin.Models;
 using Huach.Admin.Models.Basic;
+using Huach.Framework.Extend;
 using System.Linq;
 
 namespace Huach.Admin.Service.Basic
@@ -8,7 +9,7 @@ namespace Huach.Admin.Service.Basic
     /// <summary>
     /// SysUserService 
     /// </summary>
-    public class SysUserService : ServiceBase<SysUser>
+    public class SysUserService : BaseService<SysUser>
     {
         private readonly ISysUserRepository _sysUserRepository;
         private readonly ISysRoleRepository _sysRoleRepository;
@@ -20,6 +21,7 @@ namespace Huach.Admin.Service.Basic
             _sysRoleRepository = sysRoleRepository;
             _sysUserRoleRepository = sysUserRoleRepository;
         }
+
         /// <summary>
         /// »ñÈ¡½ÇÉ«
         /// </summary>
@@ -28,9 +30,17 @@ namespace Huach.Admin.Service.Basic
         {
             if (CurrentUser.IsManager)
             {
-                return _sysRoleRepository.Where(a=>a.Disable == (short)ModelBase.DisableEnum.Normal).Select(a => a.Id).ToArray();
+                return _sysRoleRepository.Where(a => a.Disable == (short)BaseModel.DisableEnum.Normal).Select(a => a.Id).ToArray();
             }
-            return _sysUserRoleRepository.Where(a => a.UserId == CurrentUser.Id && a.Disable == (short)ModelBase.DisableEnum.Normal).Select(a => a.RoleId).ToArray();
+            return _sysUserRoleRepository.Where(a => a.UserId == CurrentUser.Id && a.Disable == (short)BaseModel.DisableEnum.Normal).Select(a => a.RoleId).ToArray();
+        }
+
+        public int UpdateUser(int id)
+        {
+            return Update(() => new SysUser
+            {
+                Name = "heiho"
+            }, a => a.Id == id);
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Huach.Admin.Service.Business
     /// <summary>
     /// CompanyService 
     /// </summary>
-    public class CompanyService: ServiceBase<Company>  
+    public class CompanyService: BaseService<Company>  
     {    
 		private readonly ICompanyRepository _companyRepository;
 		public CompanyService(ICompanyRepository companyRepository)

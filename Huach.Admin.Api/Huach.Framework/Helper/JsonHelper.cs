@@ -14,7 +14,7 @@ namespace Huach.Framework.Helper
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static string JsonSerialize(object value)
+        public static string Serialize(object value)
         {
             if (value == null)
             {
@@ -28,7 +28,7 @@ namespace Huach.Framework.Helper
         /// <typeparam name="T"></typeparam>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static T JsonDeserialize<T>(string value)
+        public static T Deserialize<T>(string value)
         {
             if (string.IsNullOrWhiteSpace(value) || value.Trim() == "{}" || value.Trim() == "[]")
             {
@@ -44,7 +44,7 @@ namespace Huach.Framework.Helper
         /// <param name="value"></param>
         /// <param name="result"></param>
         /// <returns></returns>
-        public static bool TryJsonDeserialize<T>(string value, out T result)
+        public static bool TryDeserialize<T>(string value, out T result)
         {
             if (string.IsNullOrWhiteSpace(value))
             {

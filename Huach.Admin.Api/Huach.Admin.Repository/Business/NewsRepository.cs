@@ -5,7 +5,7 @@ namespace Huach.Admin.Repository.Basic
     /// <summary>
     /// NewsRepository 
     /// </summary>
-    public class NewsRepository: RepositoryBase<News>,INewsRepository
+    public class NewsRepository: BaseRepository<News>,INewsRepository
     {    
 		
     }

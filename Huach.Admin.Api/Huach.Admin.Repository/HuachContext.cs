@@ -3,6 +3,7 @@ using Huach.Admin.Models.Business;
 using Huach.Admin.Repository.Migrations;
 using Huach.Framework.Log;
 using System.Data.Entity;
+using System.Data.Entity.SqlServer;
 
 namespace Huach.Admin.Repository
 {
@@ -23,7 +24,7 @@ namespace Huach.Admin.Repository
 
         private static void FixEfProviderServicesProblem()
         {
-            var instance = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
+            var instance = SqlProviderServices.Instance;
         }
 
         public virtual DbSet<SysUser> SysUserInfoSet { get; set; }

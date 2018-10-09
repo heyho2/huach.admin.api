@@ -60,6 +60,10 @@
       <Project>{2371d43a-98ec-4609-b7e0-83b70d28729d}</Project>
       <Name>Huach.Admin.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Huach.Framework\Huach.Framework.csproj">
+      <Project>{83e2b33b-f114-4c5b-a201-9b01df1731a6}</Project>
+      <Name>Huach.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -383,6 +383,14 @@
             <param name="request"></param>
             <returns></returns>
         </member>
+        <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.UpdateName(System.Int32,System.String)">
+            <summary>
+            ceshi
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
         <member name="M:Huach.Admin.Api.Controllers.Basic.SysUserController.Disable(Huach.Admin.ViewModels.Basic.SysUserDisableRequest)">
             <summary>
             禁用（逻辑删除）
@@ -742,9 +750,9 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="P:Huach.Admin.Api.Filters.JwtAuthFilterAttribute.Secret">
+        <member name="P:Huach.Admin.Api.Filters.TokenAuthFilterAttribute.TokenName">
             <summary>
-            设置Token密钥
+            设置tokenName
             </summary>
         </member>
         <member name="P:Huach.Admin.Api.Filters.JwtAuthFilterAttribute.JwtTokenKeyName">

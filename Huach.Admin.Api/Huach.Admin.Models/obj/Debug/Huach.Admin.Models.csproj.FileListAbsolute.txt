@@ -14,4 +14,3 @@ E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Models\bin\Debug\Huach.Ad
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Models\obj\Debug\Huach.Admin.Models.csproj.CoreCompileInputs.cache
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Models\obj\Debug\Huach.Admin.Models.dll
 E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Models\obj\Debug\Huach.Admin.Models.pdb
-E:\Project\huach.admin.api\Huach.Admin.Api\Huach.Admin.Models\obj\Debug\Huach.Admin.Models.csprojAssemblyReference.cache

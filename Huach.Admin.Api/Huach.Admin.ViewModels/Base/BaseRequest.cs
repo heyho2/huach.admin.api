@@ -33,6 +33,6 @@ namespace Huach.Admin.ViewModels.Base
         /// <summary>
         /// 排序字段
         /// </summary>
-        public string SortField { get; set; } = nameof(ModelBase.Id);
+        public string SortField { get; set; } = nameof(BaseModel.Id);
     }
 }

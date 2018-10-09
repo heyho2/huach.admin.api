@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Huach.Admin.Models.Basic
 {
     [Table("sys_menu")]
-    public partial class SysMenu : ModelBase
+    public partial class SysMenu : BaseModel
     {
         /// <summary>
         /// 菜单名称

@@ -6,7 +6,7 @@ namespace Huach.Admin.Service.Basic
     /// <summary>
     /// SysUserRoleService 
     /// </summary>
-    public class SysUserRoleService: ServiceBase<SysUserRole>  
+    public class SysUserRoleService: BaseService<SysUserRole>  
     {    
 		private readonly ISysUserRoleRepository _sysUserRoleRepository;
 		public SysUserRoleService(ISysUserRoleRepository sysUserRoleRepository)

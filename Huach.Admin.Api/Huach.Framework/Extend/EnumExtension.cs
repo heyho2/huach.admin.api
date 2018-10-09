@@ -48,22 +48,33 @@ namespace Huach.Framework.Extend
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public static List<KeyValuePair<string, string>> GetAllRemarks(this Enum value)
+        public static List<KeyValuePair<string, string>> GetAllRemarks<T>(T @enum) where T : struct
         {
-            Type type = value.GetType();
-            List<KeyValuePair<string, string>> result = new List<KeyValuePair<string, string>>();
-            //ShowAttribute.
+            var type = typeof(T);
+            var result = new List<KeyValuePair<string, string>>();
             foreach (var field in type.GetFields())
             {
                 if (field.FieldType.IsEnum)
                 {
-                    object tmp = field.GetValue(value);
+                    object tmp = field.GetValue(@enum);
                     Enum enumValue = (Enum)tmp;
                     int intValue = (int)tmp;
                     result.Add(new KeyValuePair<string, string>(intValue.ToString(), enumValue.GetDescription()));
                 }
             }
             return result;
+        }
+        public static string GetDescription<T>(int value) where T : struct
+        {
+            var result = Enum.ToObject(typeof(T), value);
+            if (result == null)
+            {
+                return null;
+            }
+            else
+            {
+                return ((Enum)result).GetDescription();
+            }
         }
     }
 }

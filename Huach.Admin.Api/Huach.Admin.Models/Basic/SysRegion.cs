@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Huach.Admin.Models.Basic
 {
     [Table("sys_region")]
-    public partial class SysRegion : ModelBase
+    public partial class SysRegion : BaseModel
     {
         /// <summary>
         /// 地区名称

@@ -1,58 +1,58 @@
 ﻿using Huach.Admin.ViewModels;
+using Huach.Framework.Jwt;
 using Huach.Framework.Models;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Web;
-using Huach.Framework.Extend;
+using System.Web.Http.Controllers;
 
 namespace Huach.Admin.Api.Filters
 {
-    public class JwtAuthFilterAttribute : BaseJwtAuthFilterAttribute
+    public class JwtAuthFilterAttribute : BaseAuthFilterAttribute
     {
-        private static string _secret;
+        private static readonly string _secret;
 
-        /// <summary>
-        /// 设置Token密钥
-        /// </summary>
-        protected override string Secret => _secret;
         /// <summary>
         /// 设置tokenName
         /// </summary>
-        protected override string JwtTokenKeyName => Contants.TokenName;
+        protected string JwtTokenKeyName => Contants.TokenName;
         static JwtAuthFilterAttribute()
         {
             _secret = ConfigurationManager.AppSettings[Contants.TokenSecret];
         }
-        protected override string GetUserIdentification(IDictionary<string, object> payload)
+        protected virtual string GetJwtToken(HttpActionContext actionContext)
         {
-            if (payload?.Count > 0 && payload.ContainsKey("userName"))
-            {
-                return payload["userName"]?.ToString();
-            }
-            return null;
+            return actionContext.Request.Headers.GetValues(JwtTokenKeyName).FirstOrDefault();
         }
-        protected override bool IsAuthenticated(string userName, IDictionary<string, object> jwtPayload)
+        public override void OnAuthorization(HttpActionContext actionContext)
+        {
+            if (IsAllowAnonymous(actionContext))
+            {
+                return;
+            }
+            var token = GetJwtToken(actionContext);
+            if (string.IsNullOrWhiteSpace(token))
+            {
+                HandleUnauthenticatedRequest(actionContext, "Token为空。");
+            }
+            var jwtInfo = JwtHelper.Decode<UserInfo>(token, _secret);
+            if (jwtInfo.IsSucceed)
+            {
+                if (IsAuthenticated(jwtInfo.Payload))
+                {
+                    base.OnAuthorization(actionContext);
+                }
+            }
+            else
+            {
+                HandleUnauthenticatedRequest(actionContext, jwtInfo.Msg);
+            }
+        }
+        protected bool IsAuthenticated(UserInfo userInfo)
         {
             if (HttpContext.Current.GetOwinContext().Get<UserInfo>(nameof(UserInfo)) == null)
             {
-                try
-                {
-                    var user = new UserInfo
-                    {
-                        UserName = userName,
-                        Name = (string)jwtPayload.GetValue("Name"),
-                        Mobile = (string)jwtPayload.GetValue("Mobile"),
-                        IsManager = (bool)(jwtPayload.GetValue("IsManager") ?? false),
-                        Roles = jwtPayload.GetValue("Roles") == null ? new int[0] : ((string)jwtPayload.GetValue("Roles")).Split(',').Select(a => Convert.ToInt32(a)).ToArray(),
-                    };
-                    HttpContext.Current.GetOwinContext().Set(nameof(UserInfo), user);
-                }
-                catch (Exception)
-                {
-                    return false;
-                }
+                HttpContext.Current.GetOwinContext().Set(nameof(UserInfo), userInfo);
             }
             //if (user == null)
             //    return false;

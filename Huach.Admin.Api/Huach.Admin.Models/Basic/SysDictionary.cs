@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Huach.Admin.Models.Basic
 {
     [Table("sys_dictionary")]
-    public partial class SysDictionary : ModelBase
+    public partial class SysDictionary : BaseModel
     {
         /// <summary>
         /// 编码

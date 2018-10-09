@@ -15,12 +15,12 @@ namespace Huach.Admin.Api.Controllers
         /// 用户信息
         /// </summary>
         UserInfo CurrentUser => HttpContext.Current.GetOwinContext().Get<UserInfo>(nameof(UserInfo));
-
+        
     }
-    public class BaseApiController<T> : BaseApiController where T : ModelBase
+    public class BaseApiController<T> : BaseApiController where T : BaseModel
     {
-        private readonly ServiceBase<T> _service = null;
-        public BaseApiController(ServiceBase<T> service)
+        private readonly BaseService<T> _service = null;
+        public BaseApiController(BaseService<T> service)
         {
             _service = service;
         }

@@ -165,6 +165,7 @@
     <Compile Include="Controllers\Business\ProductTypeController.cs" />
     <Compile Include="Controllers\TokenController.cs" />
     <Compile Include="Filters\CustomExceptionFilterAttribute.cs" />
+    <Compile Include="Filters\TokenAuthFilterAttribute.cs" />
     <Compile Include="Filters\JwtAuthFilterAttribute.cs" />
     <Compile Include="Filters\ModelValidationFilterAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -5,7 +5,7 @@ namespace Huach.Admin.Repository.Business
     /// <summary>
     /// CompanyRepository 
     /// </summary>
-    public class CompanyRepository: RepositoryBase<Company>,ICompanyRepository
+    public class CompanyRepository: BaseRepository<Company>,ICompanyRepository
     {    
 		
     }

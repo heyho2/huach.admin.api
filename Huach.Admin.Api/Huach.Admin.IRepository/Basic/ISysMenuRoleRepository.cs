@@ -5,7 +5,7 @@ namespace Huach.Admin.IRepository.Basic
     /// <summary>
     /// ISysMenuRoleRepository 
     /// </summary>
-    public interface ISysMenuRoleRepository: IRepositoryBase<SysMenuRole>  
+    public interface ISysMenuRoleRepository: IBaseRepository<SysMenuRole>  
     {    
 		
     }

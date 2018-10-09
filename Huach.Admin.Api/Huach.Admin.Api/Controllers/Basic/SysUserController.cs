@@ -7,18 +7,18 @@ using System.Linq.Expressions;
 using System.Web.Http;
 using System.Web.Http.Description;
 namespace Huach.Admin.Api.Controllers.Basic
-{    
+{
     /// <summary>
     /// SysUserController 
     /// </summary>
-    public class SysUserController: BaseApiController 
-    {    
-		private readonly SysUserService _sysUserService;
-		public SysUserController(SysUserService sysUserService)
-		{
-			_sysUserService = sysUserService;
-		}
-		
+    public class SysUserController : BaseApiController
+    {
+        private readonly SysUserService _sysUserService;
+        public SysUserController(SysUserService sysUserService)
+        {
+            _sysUserService = sysUserService;
+        }
+
         /// <summary>
         /// 删除
         /// </summary>
@@ -126,6 +126,18 @@ namespace Huach.Admin.Api.Controllers.Basic
             });
         }
         /// <summary>
+        /// ceshi
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        [ResponseType(typeof(ActionResult<int>)), HttpPost]
+        public IHttpActionResult UpdateName(int id, string name)
+        {
+            _sysUserService.UpdateUser(id);
+            return Succeed();
+        }
+        /// <summary>
         /// 禁用（逻辑删除）
         /// </summary>
         /// <param name="request"></param>
@@ -149,4 +161,4 @@ namespace Huach.Admin.Api.Controllers.Basic
         }
     }
 }
-    
+

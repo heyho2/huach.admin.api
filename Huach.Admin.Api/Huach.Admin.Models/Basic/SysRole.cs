@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Huach.Admin.Models.Basic
 {
     [Table("sys_role")]
-    public partial class SysRole : ModelBase
+    public partial class SysRole : BaseModel
     {
         /// <summary>
         /// 角色名称

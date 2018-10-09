@@ -5,7 +5,7 @@ namespace Huach.Admin.IRepository.Basic
     /// <summary>
     /// ISysRegionRepository 
     /// </summary>
-    public interface ISysRegionRepository: IRepositoryBase<SysRegion>  
+    public interface ISysRegionRepository: IBaseRepository<SysRegion>  
     {    
 		
     }

@@ -1,57 +1,64 @@
-﻿using System;
+﻿using Huach.Framework.Redis;
+using System;
 using System.Web;
 
 namespace Huach.Framework.Helper
 {
-    public class RedisSession<T>
+    public class RedisSession
     {
-        public static RedisSession<T> Session => new RedisSession<T>();
+        public readonly static RedisSession Session = new RedisSession();
         /// <summary>
         /// cookie名称
         /// </summary>
-        public static string CookieName => "TOUYUNID";
+        public static string CookieName => "HuaqiSessionId";
         /// <summary>
         /// session过期时间
         /// 默认30分钟
         /// </summary>
-        private Double SessionTimeOut { get; set; } = 30;
+        private const Double SessionTimeOut = 30;
 
-        public RedisSession<T> SetTimeOut(Double time)
-        {
-            this.SessionTimeOut = time;
-            return this;
-        }
-
-        public T this[string name]
+        public object this[string name]
         {
             get
             {
-                return Redis.RedisHelper.ClusterInstance.Get<T>(RedisKey, name);
+                using (var service = new RedisHashService())
+                {
+                    return service.Get<object>(RedisKey, name);
+                }
             }
             set
             {
-                Redis.RedisHelper.ClusterInstance.SetHash(RedisKey, name, value);
-                Redis.RedisHelper.ClusterInstance.SetExpire(RedisKey, DateTime.Now.AddMinutes(SessionTimeOut));
+                using (var service = new RedisHashService())
+                {
+                    service.Set(RedisKey, name, value.ToString());
+                    service.ExpireEntryAt(RedisKey, DateTime.Now.AddMinutes(SessionTimeOut));
+                }
             }
         }
 
         public void Remove(string name)
         {
-            Redis.RedisHelper.ClusterInstance.Remove(RedisKey, name);
+            using (var service = new RedisHashService())
+            {
+                service.RemoveEntryFromHash(RedisKey, name);
+            }
         }
 
-        public void Add(string name, T value)
+        public void Add<T>(string name, T value)
         {
             this[name] = value;
         }
-        public T GetValue(string name)
+        public T Get<T>(string name)
         {
-            return this[name];
+            using (var service = new RedisHashService())
+            {
+                return service.Get<T>(RedisKey, name);
+            };
         }
         /// <summary>
         /// session id
         /// </summary>
-        public string SessionId
+        private static string SessionId
         {
             get
             {
@@ -83,13 +90,13 @@ namespace Huach.Framework.Helper
             {
                 cookie.Expires = DateTime.Now.AddDays(-1);
                 HttpContext.Current.Response.Cookies.Set(cookie);
-                return Redis.RedisHelper.ClusterInstance.KeyDelete($"Session:{CookieName}:{cookie.Value}");
+                using (var service = new RedisHashService())
+                {
+                    service.Remove(RedisKey);
+                }
             }
             return false;
         }
-        public string RedisKey => $"Session:{CookieName}:{SessionId}";
-    }
-    public class RedisSession : RedisSession<string>
-    {
+        public static string RedisKey => $"Session:{CookieName}:{SessionId}";
     }
 }

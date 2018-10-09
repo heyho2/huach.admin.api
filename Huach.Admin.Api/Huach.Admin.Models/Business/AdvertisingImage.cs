@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace Huach.Admin.Models.Business
 {
     [Table("t_advertising_image")]
-    public partial class AdvertisingImage : ModelBase
+    public partial class AdvertisingImage : BaseModel
     {
         /// <summary>
         /// Url

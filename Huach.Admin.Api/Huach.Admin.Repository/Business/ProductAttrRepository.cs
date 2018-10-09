@@ -5,7 +5,7 @@ namespace Huach.Admin.Repository.Basic
     /// <summary>
     /// ProductAttrRepository 
     /// </summary>
-    public class ProductAttrRepository: RepositoryBase<ProductAttr>,IProductAttrRepository
+    public class ProductAttrRepository: BaseRepository<ProductAttr>,IProductAttrRepository
     {    
 		
     }

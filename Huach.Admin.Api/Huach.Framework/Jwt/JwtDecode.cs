@@ -1,31 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Huach.Framework.Jwt
+﻿namespace Huach.Framework.Jwt
 {
-    internal class JwtDecode<T>
+    public class JwtDecode<T>
     {
-        public virtual bool IsSucceed
-        {
-            get
-            {
-                return this.VerifyResult == JwtVerifyResult.Succeed;
-            }
-        }
+        public virtual bool IsSucceed => VerifyResult == JwtVerifyResult.Succeed;
         public JwtVerifyResult VerifyResult { get; set; }
         public string Msg { get; set; }
         public T Payload { get; set; }
     }
 
-    internal enum JwtVerifyResult
+    public enum JwtVerifyResult
     {
         Fail = 1,
-        Succeed,
-        Expired,
-        InvalidSignature
+        Succeed = 2,
+        Expired = 3,
+        InvalidSignature = 4
     }
     public enum JwtClaimName
     {

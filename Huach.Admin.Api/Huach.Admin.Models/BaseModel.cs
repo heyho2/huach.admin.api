@@ -8,7 +8,7 @@ namespace Huach.Admin.Models
     /// <summary>
     /// 实体类基类
     /// </summary>
-    public class ModelBase
+    public class BaseModel
     {
         /// <summary>
         /// Id

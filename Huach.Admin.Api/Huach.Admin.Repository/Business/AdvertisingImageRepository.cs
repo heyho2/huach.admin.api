@@ -5,7 +5,7 @@ namespace Huach.Admin.Repository.Business
     /// <summary>
     /// AdvertisingImageRepository 
     /// </summary>
-    public class AdvertisingImageRepository: RepositoryBase<AdvertisingImage>,IAdvertisingImageRepository
+    public class AdvertisingImageRepository: BaseRepository<AdvertisingImage>,IAdvertisingImageRepository
     {    
 		
     }

@@ -5,7 +5,7 @@ namespace Huach.Admin.Repository.Basic
     /// <summary>
     /// SysDictionaryRepository 
     /// </summary>
-    public class SysDictionaryRepository: RepositoryBase<SysDictionary>,ISysDictionaryRepository
+    public class SysDictionaryRepository: BaseRepository<SysDictionary>,ISysDictionaryRepository
     {    
 		
     }

@@ -5,7 +5,7 @@ namespace Huach.Admin.IRepository.Basic
     /// <summary>
     /// ISysDictionaryRepository 
     /// </summary>
-    public interface ISysDictionaryRepository: IRepositoryBase<SysDictionary>  
+    public interface ISysDictionaryRepository: IBaseRepository<SysDictionary>  
     {    
 		
     }

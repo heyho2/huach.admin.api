@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Huach.Admin.Models.Basic
 {
     [Table("sys_user")]
-    public partial class SysUser : ModelBase
+    public partial class SysUser : BaseModel
     {
         /// <summary>
         /// 用户名称
@@ -70,6 +70,9 @@ namespace Huach.Admin.Models.Basic
         /// 是否管理员
         /// </summary>
         public bool IsManager { get; set; }
-
+        /// <summary>
+        /// 头像
+        /// </summary>
+        public string Avatar { get; set; }
     }
 }

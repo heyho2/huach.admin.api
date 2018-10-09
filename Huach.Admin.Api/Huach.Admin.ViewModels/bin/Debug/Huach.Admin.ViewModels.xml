@@ -79,6 +79,26 @@
             密码
             </summary>
         </member>
+        <member name="T:Huach.Admin.ViewModels.Basic.LoginResponse">
+            <summary>
+            登陆响应
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.LoginResponse.Token">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.LoginResponse.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.Basic.LoginResponse.Id">
+            <summary>
+            用户id
+            </summary>
+        </member>
         <member name="T:Huach.Admin.ViewModels.Basic.SysDictionaryDeleteRequest">
             <summary>
             删除请求参数
@@ -1617,6 +1637,11 @@
         <member name="P:Huach.Admin.ViewModels.UserInfo.IsManager">
             <summary>
             是否管理员
+            </summary>
+        </member>
+        <member name="P:Huach.Admin.ViewModels.UserInfo.Expired">
+            <summary>
+            过期时间
             </summary>
         </member>
     </members>

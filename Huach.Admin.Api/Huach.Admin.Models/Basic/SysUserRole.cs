@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Huach.Admin.Models.Basic
 {
     [Table("sys_user_role")]
-    public partial class SysUserRole : ModelBase
+    public partial class SysUserRole : BaseModel
     {
         /// <summary>
         /// 角色ID

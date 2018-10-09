@@ -52,7 +52,7 @@
     <Compile Include="Business\IProductAttrRepository.cs" />
     <Compile Include="Business\IProductRepository.cs" />
     <Compile Include="Business\IProductTypeRepository.cs" />
-    <Compile Include="IRepositoryBase.cs" />
+    <Compile Include="IBaseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Basic\ISysDictionaryRepository.cs" />
     <Compile Include="Basic\ISysDictionaryTypeRepository.cs" />
